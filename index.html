@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa de Aliados | CampusLA</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--bg:#02060d;
+--card:#0b111d;
+--primary:#0084ff;
+--text-main:#ffffff;
+--text-dim:#94a3b8;
+--border:rgba(255,255,255,0.08);
+}
+
+body{
+background:var(--bg);
+color:var(--text-main);
+font-family:'Plus Jakarta Sans',sans-serif;
+margin:0;
+padding:15px;
+}
+
+.wrapper{
+max-width:550px;
+margin:auto;
+}
+
+header{
+padding:30px 0;
+text-align:center;
+}
+
+.logo-text{
+font-size:2.2rem;
+font-weight:700;
+}
+
+.inst-tag{
+font-size:0.65rem;
+color:var(--primary);
+font-weight:700;
+letter-spacing:2px;
+}
+
+.section-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:20px;
+border-radius:16px;
+margin-bottom:20px;
+}
+
+h3{
+font-size:0.9rem;
+color:var(--primary);
+text-transform:uppercase;
+border-bottom:1px solid var(--border);
+padding-bottom:8px;
+}
+
+.welcome-h2{
+font-size:1.3rem;
+text-align:center;
+}
+
+.copy{
+font-size:0.85rem;
+color:var(--text-dim);
+text-align:center;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.full{
+grid-column:span 2;
+}
+
+label{
+font-size:0.75rem;
+color:var(--text-dim);
+}
+
+input,select{
+width:100%;
+background:#050a14;
+border:1px solid var(--border);
+border-radius:8px;
+padding:10px;
+color:white;
+margin-bottom:12px;
+}
+
+.btn{
+display:block;
+text-align:center;
+background:var(--primary);
+color:white;
+padding:16px;
+border-radius:10px;
+border:none;
+font-weight:700;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#0066cc;
+}
+
+.info-box{
+background:rgba(255,255,255,0.03);
+padding:15px;
+border-left:3px solid var(--primary);
+font-size:0.8rem;
+}
+
+footer{
+text-align:center;
+padding:25px;
+font-size:0.75rem;
+color:var(--text-dim);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<header>
+<div class="logo-text">CAMPUSLA</div>
+<div class="inst-tag">PROGRAMA DE ALIANZAS</div>
+</header>
+
+<form action="https://formsubmit.co/eatramites1@gmail.com" method="POST" id="mainForm" enctype="multipart/form-data">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+
+<section class="section-card" style="text-align:center">
+
+<h2 class="welcome-h2">Programa de Aliados CampusLA</h2>
+
+<p class="copy">
+Campus Latinoamérica desarrolla alianzas con instituciones,
+academias y profesionales independientes para promover
+certificaciones internacionales y programas educativos.
+</p>
+
+<a href="https://www.campuslatinoamerica.edu.co" target="_blank"
+style="display:block;background:#fff;color:#000;padding:12px;border-radius:8px;text-decoration:none;font-weight:800;margin-top:15px">
+VISITAR SITIO OFICIAL
+</a>
+
+</section>
+
+<section class="section-card">
+
+<h3>01. Información del Aliado</h3>
+
+<div class="form-grid">
+
+<div>
+<label>Tipo de Aliado</label>
+<select name="Tipo_Aliado" required>
+<option value="">Seleccione</option>
+<option>Institución</option>
+<option>Empresa</option>
+<option>Profesional Independiente</option>
+</select>
+</div>
+
+<div>
+<label>Documento / NIT</label>
+<input type="text" name="Documento">
+</div>
+
+<div class="full">
+<label>Nombre del Aliado / Institución</label>
+<input type="text" name="Nombre_Aliado" required>
+</div>
+
+<div>
+<label>Teléfono / WhatsApp</label>
+<input type="tel" name="Telefono">
+</div>
+
+<div>
+<label>Ciudad Principal</label>
+<input type="text" name="Ciudad">
+</div>
+
+<div class="full">
+<label>Sedes o Ciudades donde opera</label>
+<input type="text" name="Sedes">
+</div>
+
+<div class="full">
+<label>Sitio web o redes sociales</label>
+<input type="text" name="Web">
+</div>
+
+</div>
+
+</section>
+
+<section class="section-card">
+
+<h3>02. Identificación del Aliado</h3>
+
+<label>Logo o Imagen Representativa</label>
+
+<input type="file" name="Logo_Aliado" accept="image/*">
+
+</section>
+
+<section class="section-card">
+
+<h3>03. Lineamientos de Alianza</h3>
+
+<div class="info-box">
+
+<strong>Reglas de promoción</strong><br><br>
+
+• Todas las publicaciones deberán incluir el logo de CampusLA.<br>
+• Se debe mencionar:<br>
+<b>"En alianza con Campus Latinoamérica"</b><br>
+• Sitio oficial:<br>
+www.campuslatinoamerica.edu.co<br><br>
+
+Los aliados pueden promover certificaciones,
+exámenes internacionales y programas educativos
+ofrecidos por CampusLA.
+
+</div>
+
+</section>
+
+<section class="section-card">
+
+<h3>04. Documentos</h3>
+
+<a href="portafolio-campusla.pdf" class="btn">
+DESCARGAR PORTAFOLIO
+</a>
+
+<br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alianza Oficial | CampusLA</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #02060d; --card: #0b111d; --primary: #0084ff;
+    --secondary: #00f2ff; --text-main: #ffffff; --text-dim: #94a3b8;
+    --border: rgba(255,255,255,0.08);
+}
+body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 15px; font-size: 13px; }
+.wrapper { max-width: 600px; width: 100%; margin: auto; }
+
+header { padding: 30px 0; text-align: center; }
+.logo-text { font-size: 2.2rem; font-weight: 700; color: #fff; letter-spacing: -1px; margin: 0; cursor: pointer; }
+.inst-tag { font-size: 0.65rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+.section-card { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 16px; margin-bottom: 20px; text-align: left; }
+h3 { font-size: 0.9rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+
+.welcome-h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 10px; color: #fff; text-align: center; }
+.copy-redes { font-size: 0.85rem; color: var(--text-dim); text-align: center; line-height: 1.4; margin-bottom: 18px; }
+.mandatory-badge { background: #fff; color: #000; font-size: 0.7rem; font-weight: 800; padding: 4px 12px; border-radius: 4px; display: inline-block; margin-bottom: 12px; text-transform: uppercase; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.full-width { grid-column: span 2; }
+label { display: block; font-size: 0.75rem; font-weight: 600; color: var(--text-dim); margin-bottom: 6px; }
+input, select, textarea { width: 100%; background: #050a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px; color: white; font-size: 0.85rem; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
+
+.btn-blue { display: block; text-decoration: none; text-align: center; background: var(--primary); color: white; width: 100%; padding: 16px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; line-height: 1.2; box-sizing: border-box; }
+.btn-blue span { display: block; font-size: 0.65rem; font-weight: 400; opacity: 0.9; text-transform: none; margin-top: 4px; }
+.btn-blue:hover { background: #0066cc; box-shadow: 0 0 15px rgba(0, 132, 255, 0.3); }
+
+.cam-input { border: 1px dashed var(--primary); background: rgba(0, 132, 255, 0.03); padding: 12px; border-radius: 8px; text-align: center; margin-bottom: 15px; }
+
+footer { text-align: center; padding: 30px; font-size: 0.8rem; color: var(--text-dim); border-top: 1px solid var(--border); margin-top: 20px; letter-spacing: 1px; }
+
+.logo-gallery { display: grid; grid-template-columns: repeat(auto-fill,minmax(80px,1fr)); gap: 10px; justify-items: center; margin-top: 15px; }
+.logo-gallery img { max-width: 70px; max-height: 50px; object-fit: contain; }
+.table-sedes input { width: 100%; padding: 5px; border-radius: 5px; border: 1px solid #ccc; background: #050a14; color: #fff; font-size: 0.85rem; box-sizing: border-box; }
+.table-sedes { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+.table-sedes th, .table-sedes td { border: 1px solid #ccc; padding: 5px; text-align: center; font-size: 0.8rem; color: #fff; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header>
+    <div class="logo-text">CAMPUSLA</div>
+    <div class="inst-tag">ALIANZA CON CAMPUSLA</div>
+</header>
+
+<form action="https://formsubmit.co/eatramites1@gmail.com" method="POST" id="mainForm" enctype="multipart/form-data">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+<input type="file" id="inputFirmaOculto" name="Firma_Digital" style="display:none;">
+
+<section class="section-card">
+<h2 class="welcome-h2">¡Bienvenido aliado CampusLA!</h2>
+<div class="mandatory-badge">Requisito de Alianza</div>
+<p class="copy-redes">Es obligatorio completar este formulario y firmar la confidencialidad para oficializar la alianza.</p>
+
+<a href="https://www.campuslatinoamerica.edu.co" target="_blank" style="display: block; background: #fff; color: #000; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;">
+VISITA: www.campuslatinoamerica.edu.co
+</a>
+
+<button type="button" onclick="window.open('https://campusla.github.io/hub-campusla-branding/','_blank')" class="btn-blue">
+Ver Track Record
+</button>
+
+</div>
+</section>
+
+<section class="section-card">
+<h3>01. Información del Aliado</h3>
+<div class="form-grid">
+<div class="full-width"><label>Nombre / Institución</label><input type="text" name="Nombre_Institucion" required></div>
+<div><label>Documento / NIT</label><input type="text" name="Documento" required></div>
+<div><label>Teléfono de contacto</label><input type="tel" name="Telefono" required></div>
+<div class="full-width"><label>Email de contacto</label><input type="email" name="Email" required></div>
+</div>
+</section>
+
+<section class="section-card">
+<h3>02. Tabla de Sedes</h3>
+<table class="table-sedes">
+<tr><th>N°</th><th>Ciudad</th><th>Dirección</th><th>Responsable</th></tr>
+<tr><td>1</td><td><input type="text" name="Sede1_Ciudad"></td><td><input type="text" name="Sede1_Direccion"></td><td><input type="text" name="Sede1_Responsable"></td></tr>
+<tr><td>2</td><td><input type="text" name="Sede2_Ciudad"></td><td><input type="text" name="Sede2_Direccion"></td><td><input type="text" name="Sede2_Responsable"></td></tr>
+<tr><td>3</td><td><input type="text" name="Sede3_Ciudad"></td><td><input type="text" name="Sede3_Direccion"></td><td><input type="text" name="Sede3_Responsable"></td></tr>
+<tr><td>4</td><td><input type="text" name="Sede4_Ciudad"></td><td><input type="text" name="Sede4_Direccion"></td><td><input type="text" name="Sede4_Responsable"></td></tr>
+<tr><td>5</td><td><input type="text" name="Sede5_Ciudad"></td><td><input type="text" name="Sede5_Direccion"></td><td><input type="text" name="Sede5_Responsable"></td></tr>
+</table>
+</section>
+
+<section class="section-card">
+<h3>03. Validación de Identidad</h3>
+<label>📸 Foto Selfie (Cámara Frontal)</label>
+<div class="cam-input"><input type="file" name="Selfie" accept="image/*" capture="user" required></div>
+<label>🪪 Documento de Identidad / NIT (Cámara Trasera)</label>
+<div class="cam-input"><input type="file" name="Cedula_Foto" accept="image/*" capture="environment" required></div>
+</section>
+
+<section class="section-card">
+<h3>04. Firma de Confidencialidad</h3>
+<button type="button" onclick="guardarYFirma()" class="btn-blue">
+FIRMAR DOCUMENTO DE CONFIDENCIALIDAD<br><span>Para avanzar en el proceso de alianza</span>
+</button>
+</section>
+
+<section class="section-card">
+<h3>05. Finalizar Registro</h3>
+<button type="submit" class="btn-blue" style="background:#00c853;">Enviar Formulario de Alianza</button>
+</section>
+</form>
+
+<footer>
+CAMPUSLA DE CLASE MUNDIAL<br>
+ALIANZA CON ESCUELA ANDINA
+</footer>
+</div>
+
+<script>
+function guardarYFirma() {
+    const datos = {
+        nombre: document.querySelector('input[name="Nombre_Institucion"]').value,
+        documento: document.querySelector('input[name="Documento"]').value,
+        telefono: document.querySelector('input[name="Telefono"]').value,
+        email: document.querySelector('input[name="Email"]').value
+    };
+    localStorage.setItem('datos_aliado', JSON.stringify(datos));
+    window.location.href = "firma-aliados.html"; // Página de firma
+}
+
+window.onload = function() {
+    const firma = localStorage.getItem('firma_aliado');
+    if(firma) {
+        const inputFirma = document.getElementById('inputFirmaOculto');
+        if(inputFirma) inputFirma.value = firma;
+    }
+    const dGuardados = localStorage.getItem('datos_aliado');
+    if(dGuardados) {
+        const d = JSON.parse(dGuardados);
+        if(d.nombre) document.querySelector('input[name="Nombre_Institucion"]').value = d.nombre;
+        if(d.documento) document.querySelector('input[name="Documento"]').value = d.documento;
+        if(d.telefono) document.querySelector('input[name="Telefono"]').value = d.telefono;
+        if(d.email) document.querySelector('input[name="Email"]').value = d.email;
+    }
+};
+</script>
+</body>
+</html>
