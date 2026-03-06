@@ -360,13 +360,9 @@ Ver Track Record
 <div class="cam-input"><input type="file" name="Cedula_Foto" accept="image/*" capture="environment" required></div>
 <section class="section-card">
     <h3>04. Firma de Confidencialidad</h3>
-
-    <!-- Aviso para el aliado -->
-    <div style="background:#ffeaa7; color:#000; padding:12px; border-radius:8px; margin-bottom:15px; font-weight:600;">
-        Estimado aliado: la firma no aplica para pagaré ni contrato de servicios.
-    </div>
-
-    <!-- Botón para ir al form de contratos de CampusLA -->
+    <p class="copy-redes" style="margin-bottom:10px;">
+        Estimado aliado: la firma de confidencialidad se abrirá en una nueva pestaña; no aplica para pagaré ni contrato de servicios.
+    </p>
     <button type="button" onclick="guardarYFirma()" class="btn-blue">
         FIRMAR DOCUMENTO DE CONFIDENCIALIDAD<br>
         <span>Para avanzar en el proceso de alianza</span>
@@ -375,7 +371,7 @@ Ver Track Record
 
 <script>
 function guardarYFirma() {
-    // Guardar datos del aliado en localStorage
+    // Guardar los datos actuales del aliado
     const datos = {
         nombre: document.querySelector('input[name="Nombre_Institucion"]').value,
         documento: document.querySelector('input[name="Documento"]').value,
@@ -384,11 +380,14 @@ function guardarYFirma() {
     };
     localStorage.setItem('datos_aliado', JSON.stringify(datos));
 
-    // Redirigir al form de contratos de CampusLA
-    window.location.href = "https://campusla.github.io/Formprocesoscampusla/contratosdeprestaci%C3%B3ndeserviciosdigitales.html";
+    // Abrir el formulario de contratos en nueva pestaña
+    window.open(
+        "https://campusla.github.io/Formprocesoscampusla/contratosdeprestaci%C3%B3ndeserviciosdigitales.html",
+        "_blank"
+    );
 }
 
-// Recuperar datos y firma si vuelven al form
+// Recuperar datos al volver de la firma
 window.onload = function() {
     const firma = localStorage.getItem('firma_aliado');
     if(firma) {
@@ -405,11 +404,6 @@ window.onload = function() {
     }
 };
 </script>
-
-<section class="section-card">
-<h3>05. Finalizar Registro</h3>
-<button type="submit" class="btn-blue" style="background:#00c853;">Enviar Formulario de Alianza</button>
-</section>
 </form>
 
 <footer>
