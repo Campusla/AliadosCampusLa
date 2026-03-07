@@ -358,52 +358,19 @@ Ver Track Record
 <div class="cam-input"><input type="file" name="Selfie" accept="image/*" capture="user" required></div>
 <label>🪪 Documento de Identidad / NIT (Cámara Trasera)</label>
 <div class="cam-input"><input type="file" name="Cedula_Foto" accept="image/*" capture="environment" required></div>
-<section class="section-card">
-    <h3>04. Firma de Confidencialidad</h3>
-    <p class="copy-redes" style="margin-bottom:10px;">
-        Estimado aliado: la firma de confidencialidad se abrirá en una nueva pestaña; no aplica para pagaré ni contrato de servicios.
-    </p>
-    <button type="button" onclick="guardarYFirma()" class="btn-blue">
-        FIRMAR DOCUMENTO DE CONFIDENCIALIDAD<br>
-        <span>Para avanzar en el proceso de alianza</span>
-    </button>
 </section>
 
-<script>
-function guardarYFirma() {
-    // Guardar los datos actuales del aliado
-    const datos = {
-        nombre: document.querySelector('input[name="Nombre_Institucion"]').value,
-        documento: document.querySelector('input[name="Documento"]').value,
-        telefono: document.querySelector('input[name="Telefono"]').value,
-        email: document.querySelector('input[name="Email"]').value
-    };
-    localStorage.setItem('datos_aliado', JSON.stringify(datos));
+<section class="section-card">
+<h3>04. Firma de Confidencialidad</h3>
+<button type="button" onclick="guardarYFirma()" class="btn-blue">
+FIRMAR DOCUMENTO DE CONFIDENCIALIDAD<br><span>Para avanzar en el proceso de alianza</span>
+</button>
+</section>
 
-    // Abrir el formulario de contratos en nueva pestaña
-    window.open(
-        "https://campusla.github.io/Formprocesoscampusla/contratosdeprestaci%C3%B3ndeserviciosdigitales.html",
-        "_blank"
-    );
-}
-
-// Recuperar datos al volver de la firma
-window.onload = function() {
-    const firma = localStorage.getItem('firma_aliado');
-    if(firma) {
-        const inputFirma = document.getElementById('inputFirmaOculto');
-        if(inputFirma) inputFirma.value = firma;
-    }
-    const dGuardados = localStorage.getItem('datos_aliado');
-    if(dGuardados) {
-        const d = JSON.parse(dGuardados);
-        if(d.nombre) document.querySelector('input[name="Nombre_Institucion"]').value = d.nombre;
-        if(d.documento) document.querySelector('input[name="Documento"]').value = d.documento;
-        if(d.telefono) document.querySelector('input[name="Telefono"]').value = d.telefono;
-        if(d.email) document.querySelector('input[name="Email"]').value = d.email;
-    }
-};
-</script>
+<section class="section-card">
+<h3>05. Finalizar Registro</h3>
+<button type="submit" class="btn-blue" style="background:#00c853;">Enviar Formulario de Alianza</button>
+</section>
 </form>
 
 <footer>
@@ -420,24 +387,12 @@ function guardarYFirma() {
         telefono: document.querySelector('input[name="Telefono"]').value,
         email: document.querySelector('input[name="Email"]').value
     };
+    // Guardamos para que no se borren los datos al cambiar de página
     localStorage.setItem('datos_aliado', JSON.stringify(datos));
-    window.location.href = "firma-aliados.html"; // Página de firma
+    
+    // LA RUTA MELOSA:
+    window.location.href = "terminosagreement.html"; 
 }
-
-window.onload = function() {
-    const firma = localStorage.getItem('firma_aliado');
-    if(firma) {
-        const inputFirma = document.getElementById('inputFirmaOculto');
-        if(inputFirma) inputFirma.value = firma;
-    }
-    const dGuardados = localStorage.getItem('datos_aliado');
-    if(dGuardados) {
-        const d = JSON.parse(dGuardados);
-        if(d.nombre) document.querySelector('input[name="Nombre_Institucion"]').value = d.nombre;
-        if(d.documento) document.querySelector('input[name="Documento"]').value = d.documento;
-        if(d.telefono) document.querySelector('input[name="Telefono"]').value = d.telefono;
-        if(d.email) document.querySelector('input[name="Email"]').value = d.email;
-    }
 };
 </script>
 </body>
