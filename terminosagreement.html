@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convenio Aliados - CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== GLOBAL ===== */
+        body {
+            background: #020617;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #e6edf5;
+            margin: 0;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .section-card {
+            background: linear-gradient(145deg, #071a33, #0a2245);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(56,189,248,0.2);
+        }
+
+        h2, h3 {
+            margin-top: 0;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        /* ===== CAJA DE TEXTO LEGAL ===== */
+        .terminos-box {
+            background: #020c1b;
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(56,189,248,.15);
+            line-height: 1.6;
+            color: #d6e3f1;
+            font-size: 0.9rem;
+            max-height: 180px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+        }
+
+        /* ===== BLOQUE DE IDENTIDAD (NOMBRE) ===== */
+        .nombre-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-refuerzo {
+            width: 100%;
+            background: #020c1b;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(56,189,248,.4);
+            color: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #previewNombre {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.9rem;
+            color: #38bdf8;
+            min-height: 45px;
+            border-bottom: 1px solid rgba(56,189,248,0.2);
+            display: inline-block;
+            width: 80%;
+            text-transform: none;
+        }
+
+        /* ===== AREA DE DIBUJO (CANVAS) ===== */
+        .canvas-container {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            border: 2px solid #38bdf8;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        #firmaCanvas {
+            display: block;
+            width: 100%;
+            height: 220px;
+            cursor: crosshair;
+        }
+
+        /* ===== BOTONES ===== */
+        .btn-limpiar {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .btn-enviar {
+            background: #22c55e;
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            margin-top: 10px;
+        }
+
+        .btn-enviar:hover { background: #16a34a; transform: scale(1.01); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form id="formAliados" action="https://formspree.io/f/eatramites@gmail.com" method="POST">
+        
+        <div class="section-card">
+            <h2>Acuerdo de Colaboración</h2>
+            <div class="terminos-box">
+                <p>Al proceder con la firma, usted acepta los términos del programa de aliados de <b>Campus Latinoamérica</b>.</p>
+                <p>CampusLA – Colombia
+Licencia de funcionamiento – Resolución 210 del 4 de marzo de 2020
+Sitio web: www.campuslatinoamerica.edu.co
+En convenios y procesos de articulación con:
+In Other Words – ETS – CAT (Cambridge School of Performing and Visual Arts) – MET Exam – TOEFL – ETS – RIET – USAID – Oxford – OTE – Pearson – Cambridge – Universidad Jorge Tadeo Lozano – UPTC – Pontificia Universidad Javeriana.
+Aprobación Ministerio de Educación Nacional – Examen ITEP Decreto 12730 de 2017.
+Resolución Secretaría de Educación de Duitama 210 – Decreto 0.60.0.1.2.3 de 2020.
+Tel: +57 314 436 5569
+________________________________________
+Asunto: Selección de La institución para habilitación de Exámenes Internacionales – Resolución 018035 de 2021 Ministerio de Educación Nacional
+Estimadas directivas de La institución,
+Reciban un cordial saludo.
+Nos complace informarles que La institución ha sido seleccionada para participar en el programa de habilitación de Exámenes Internacionales administrados a través de la plataforma CampusLA, en cumplimiento de la Resolución 018035 de 2021 del Ministerio de Educación Nacional.
+Este programa tiene como objetivo fortalecer las capacidades institucionales en evaluación internacional del idioma inglés, ampliando las oportunidades académicas para sus estudiantes y permitiendo a su institución administrar certificaciones internacionales reconocidas.
+________________________________________
+
+Quiénes somos?
+CampusLA es una plataforma educativa respaldada por el programa Economía Naranja del SENA, que integra diferentes servicios educativos y académicos en cinco ejes principales:
+Oferta Académica
+Más de 4500 cursos en habilidades blandas, habilidades técnicas, economía naranja y formación para el trabajo.
+Certificación de Habilidades Laborales
+Programas de certificación orientados al desarrollo de competencias laborales.
+Exámenes Internacionales
+Trabajamos con diversas casas certificadoras internacionales como:
+Cambridge – MET – Anglia – TOEFL – Oxford Test of English – Versant – LinguaSkill – Pearson – Benchmark.
+Directorio académico y empresarial
+Plataforma que conecta estudiantes, instituciones educativas y empresas.
+E-commerce educativo para aliados
+Sistema gratuito que permite a instituciones aliadas ofertar programas académicos dentro de la plataforma.
+Además, CampusLA desarrolla programas de movilidad académica, homologaciones universitarias, diplomados internacionales y acceso a programas de pregrado, especialización, maestría y doctorado con universidades aliadas.
+________________________________________
+Alcance del programa para La institución
+A través de este programa, La institución podrá habilitar un pull de exámenes internacionales pertenecientes a algunas de las principales casas certificadoras del mundo.
+Esto permitirá:
+• ofrecer certificaciones internacionales directamente a sus estudiantes
+• administrar procesos de evaluación en sus propias instalaciones
+• fortalecer su oferta académica
+• generar ingresos institucionales adicionales
+________________________________________
+Exámenes Internacionales disponibles
+Dentro del programa, La institución podrá acceder a diversas modalidades de evaluación internacional del idioma inglés:
+• ANGLIA – 3, 4 y 5 habilidades
+• TOEFL Paper Based – 3 habilidades
+• MET – 3, 4 y 5 habilidades
+• TOEFL ITP Virtual – 3 y 4 habilidades
+• LinguaSkill – 3 y 4 habilidades
+• Versant – 4 habilidades
+• Oxford Test of English – 3 y 4 habilidades
+• OPTE – 4 habilidades
+• Pearson – 3 y 4 habilidades
+• Benchmark – 4 habilidades
+• TOEFL IBT – 4 habilidades
+En total, La institución tendrá acceso a aproximadamente 18 modalidades diferentes de exámenes internacionales.
+________________________________________
+Activación del programa
+Para activar el programa en su institución, simplemente deben revisar y firmar el documento disponible en el siguiente enlace:
+https://campusla.github.io/AliadosCampusLa/
+Una vez firmado el documento, La institución quedará habilitada para iniciar el proceso de implementación del sistema de exámenes internacionales dentro de su institución.
+Este proceso:
+• no tiene ningún costo para la institución
+• no exige metas mínimas de ventas
+• no requiere compra anticipada de exámenes
+Los exámenes se solicitan únicamente bajo demanda, según las necesidades de la institución.
+Posteriormente, CampusLA enviará:
+• tabla de comisiones institucionales
+• estructura de precios de exámenes
+• lineamientos de uso de logotipos
+• programas de capacitación para el personal encargado.
+________________________________________
+Implementación institucional
+CampusLA brindará acompañamiento para:
+• capacitación del personal administrativo y académico
+• implementación de exámenes internacionales dentro de sus programas
+• integración de certificaciones como requisito de grado
+• desarrollo de programas de preparación para los estudiantes.
+________________________________________
+Quedamos atentos para coordinar una reunión virtual y ampliar la información sobre el funcionamiento del programa.
+Será un gusto contar con La institución como parte del ecosistema académico de CampusLA, trabajando conjuntamente para fortalecer las oportunidades educativas y de certificación internacional en la región.
+________________________________________
+Cordialmente,
+
+Hollman Alberto Álvarez Salamanca
+Representante Legal
+CampusLA S.A.S
+NIT 1052379481
+Resolución 210 de 2020
+Tel: +57 314 436 5569
+contacto@campuslatinoamerica.edu.co
+www.campuslatinoamerica.edu.co
+
+Se compromete a la promoción honesta de los servicios educativos y al cumplimiento de las metas acordadas.</p>
+                </div>
+        </div>
+
+        <div class="section-card">
+            <h3>Validación de Identidad</h3>
+            
+            <div class="nombre-container">
+                <label style="font-size: 0.85rem; margin-bottom: 8px; display: block;">1. Escriba su nombre completo (Aceptación escrita):</label>
+                <input type="text" name="Nombre_Legal" id="inputNombre" class="input-refuerzo" placeholder="ESCRIBA AQUÍ SU NOMBRE" required>
+                
+                <div id="previewNombre"></div>
+            </div>
+
+            <div class="dibujo-container">
+                <label style="font-size: 0.85rem; margin-bottom: 8px; display: block;">2. Realice su firma manual (Validación gráfica):</label>
+                <div class="canvas-container">
+                    <canvas id="firmaCanvas"></canvas>
+                </div>
+                <input type="hidden" name="Firma_Imagen_PNG" id="hiddenFirma">
+                <button type="button" class="btn-limpiar" onclick="limpiarCanvas()">Limpiar dibujo</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-enviar">Confirmar Afiliación</button>
+    </form>
+</div>
+
+<script>
+    const canvas = document.getElementById("firmaCanvas");
+    const ctx = canvas.getContext("2d");
+    const form = document.getElementById("formAliados");
+    const inputNombre = document.getElementById("inputNombre");
+    const previewNombre = document.getElementById("previewNombre");
+    const hiddenFirma = document.getElementById("hiddenFirma");
+
+    let trazando = false;
+
+    // Sincronizar texto con preview
+    inputNombre.addEventListener('input', (e) => {
+        previewNombre.innerText = e.target.value;
+    });
+
+    // Ajuste de tamaño
+    function ajustar() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
+    window.onload = ajustar;
+
+    // Lógica de Firma (Mouse y Touch)
+    function getPos(e) {
+        let rect = canvas.getBoundingClientRect();
+        let cx = e.touches ? e.touches[0].clientX : e.clientX;
+        let cy = e.touches ? e.touches[0].clientY : e.clientY;
+        return { x: cx - rect.left, y: cy - rect.top };
+    }
+
+    function inicio(e) {
+        trazando = true;
+        let p = getPos(e);
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        if(e.type === 'touchstart') e.preventDefault();
+    }
+
+    function mov(e) {
+        if (!trazando) return;
+        let p = getPos(e);
+        ctx.lineWidth = 3;
+        ctx.lineCap = "round";
+        ctx.strokeStyle = "#000000";
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+        if(e.type === 'touchmove') e.preventDefault();
+    }
+
+    function fin() { trazando = false; }
+
+    canvas.addEventListener("mousedown", inicio);
+    canvas.addEventListener("mousemove", mov);
+    window.addEventListener("mouseup", fin);
+    canvas.addEventListener("touchstart", inicio, {passive: false});
+    canvas.addEventListener("touchmove", mov, {passive: false});
+    canvas.addEventListener("touchend", fin);
+
+    function limpiarCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        hiddenFirma.value = "";
+    }
+
+    // Al enviar el formulario compilamos la imagen
+    form.onsubmit = function() {
+        const dataURL = canvas.toDataURL("image/png");
+        hiddenFirma.value = dataURL;
+    };
+</script>
+
+</body>
+</html>
