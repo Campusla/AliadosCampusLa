@@ -574,21 +574,35 @@ Líder de Globalización
         </a>
     </div>
 </div>
-        <section class="section-card">
-            <h3>Información y Sedes de Operación</h3>
-            <input type="text" name="Nombre_Aliado" placeholder="Nombre de la Institución" required>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <input type="text" name="Documento" placeholder="NIT / Documento" required>
-                <input type="tel" name="Telefono" placeholder="WhatsApp" required>
-            </div>
-            <table class="table-sedes">
-                <thead><tr><th>N°</th><th>Ciudad</th><th>Dirección</th><th>Responsable</th></tr></thead>
-                <tbody>
-                    <tr><td>1</td><td><input type="text" name="S1_C" placeholder="Ciudad"></td><td><input type="text" name="S1_D" placeholder="Dirección"></td><td><input type="text" name="S1_R" placeholder="Nombre"></td></tr>
-                    <tr><td>2</td><td><input type="text" name="S2_C" placeholder="Ciudad"></td><td><input type="text" name="S2_D" placeholder="Dirección"></td><td><input type="text" name="S2_R" placeholder="Nombre"></td></tr>
-                </tbody>
-            </table>
-        </section>
+        <form id="mainForm" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+
+    <div class="form-grid">
+        <label>Nombres y Apellidos</label>
+        <input type="text" name="Nombre_Completo" required>
+
+        <label>Cédula / Documento</label>
+        <input type="number" name="Cedula" required>
+
+        <label>Correo Institucional</label>
+        <input type="email" name="Correo_1" required>
+
+        <label>Correo Personal</label>
+        <input type="email" name="Correo_2" required>
+
+        <label>Teléfono / WhatsApp</label>
+        <input type="tel" name="Telefono" required>
+
+        <label>Ciudad</label>
+        <input type="text" name="Ciudad" required>
+
+        <label>Firma Digital (Nombre completo)</label>
+        <input type="text" name="Firma_Digital" placeholder="Escribe tu nombre para firmar..." required>
+    </div>
+
+    <button type="submit" class="btn">FINALIZAR RADICACIÓN</button>
+</form>
 
         <button type="submit" class="btn-green">FIRMAR Y ENVIAR ALIANZA</button>
     </form>
