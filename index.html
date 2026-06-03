@@ -81,15 +81,6 @@ Rector | U Virtual de México
     <strong>EXCLUSIVIDAD:</strong> 
     <br>
 
- 
-
-
-
-
-   
-
-
-
 
 Asunto:
 Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – México – 
@@ -185,16 +176,6 @@ Líder de Globalización
                 <h3>Agreement</h3>
                 <div class="box" contenteditable="true" name="Agreement">
 
- 
-
-
-
-
-   
-
-
-
-
 Asunto:
 Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – México – 
 www.campuslatinoamerica.edu.co
@@ -241,14 +222,8 @@ English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
 3.	Activación: Entrega de kits de marca, manuales de uso y coordinación con los equipos de promoción para el despliegue inmediato.
 
 
-
-
-
 Agradecemos la confianza en Campus Latinoamérica. Estamos listos para ejecutar este proyecto, transformando la educación virtual en una puerta de entrada al mundo. Nos proyectamos como el hito operativo donde la infraestructura y los convenios estarán plenamente desplegados. Estamos seguros de que esta alianza marcará un antes y un después en la educación superior de México y Colombia.
-
 Atentamente,
-
-
 
 Hollman Álvarez Salamanca.
 Líder de Globalización
@@ -465,16 +440,7 @@ Líder de Globalización
             <div class="section">
                 <h3>Agreement</h3>
                 <div class="box" contenteditable="true" name="Agreement">
-
- 
-
-
-
-
    
-
-
-
 
 Asunto:
 Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – México – 
@@ -561,34 +527,29 @@ Líder de Globalización
             </div>
 
             <div class="section">
-                <h3>Firma Digital (Escribe o Dibuja)</h3>
-                <input type="text" id="nombre-input" placeholder="Escribe tu nombre para generar firma cursiva..." oninput="actualizarFirma(this.value)">
-                <div id="firma-display"></div>
-                <canvas id="signature-pad" style="border: 1px solid var(--border); width: 100%; height: 150px; background: #050a14; border-radius: 10px; cursor: crosshair;"></canvas>
-                <input type="hidden" name="Firma_Digital" id="hidden-signature">
-                <button type="button" onclick="limpiarCanvas()" style="background:none; border:none; color:#666; cursor:pointer; display:block; margin: 10px 0;">Limpiar dibujo</button>
-                <button type="button" class="btn" onclick="prepararYEnviar()" style="width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; text-transform: uppercase;">FIRMAR ALIANZA</button>
-            </div>
-        </form>
+    <h3>Firma Digital (Escribe tu nombre)</h3>
+    <p style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 10px;">Escribe tu nombre completo para validar tu firma legal.</p>
+    
+    <input type="text" 
+           name="Firma_Digital" 
+           id="input-firma" 
+           placeholder="Tu nombre completo aquí..." 
+           required 
+           style="width: 100%; padding: 15px; background: #050a14; border: 1px solid var(--primary); border-radius: 8px; color: white; font-size: 1rem; text-transform: uppercase;">
+    
+    <div style="margin-top: 10px; font-family: 'Brush Script MT', cursive; font-size: 1.8rem; color: var(--secondary);" id="preview-firma"></div>
+</div>
 
-        <script>
-            // Firma cursiva automática
-            function actualizarFirma(val) { document.getElementById('firma-display').innerText = val; }
+<button type="submit" class="btn">FIRMAR ALIANZA</button>
 
-            // Canvas para dibujar
-            const canvas = document.getElementById('signature-pad');
-            const ctx = canvas.getContext('2d');
-            let drawing = false;
-            canvas.addEventListener('mousedown', () => drawing = true);
-            canvas.addEventListener('mouseup', () => { drawing = false; ctx.beginPath(); });
-            canvas.addEventListener('mousemove', (e) => {
-                if (!drawing) return;
-                ctx.lineWidth = 2; ctx.strokeStyle = '#fff';
-                ctx.lineTo(e.offsetX, e.offsetY); ctx.stroke();
-            });
-            function limpiarCanvas() { ctx.clearRect(0, 0, canvas.width, canvas.height); }
-        </script>
-</body>
+<script>
+    const inputFirma = document.getElementById('input-firma');
+    const previewFirma = document.getElementById('preview-firma');
+
+    inputFirma.addEventListener('input', function() {
+        previewFirma.innerText = this.value;
+    });
+</script>
 </html>
 <div class="section">
     <h3>Recursos y Credenciales</h3>
