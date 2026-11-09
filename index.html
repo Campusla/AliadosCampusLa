@@ -1,172 +1,418 @@
-<!DOCTYPE html>
+Ya te paso la estructura que tenemos en git solo es corregir el texto: <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alianza Estratégica y Protocolo de Alta Seguridad | CampusLA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root { 
-            --bg: #f8fafc; 
-            --card: #ffffff; 
-            --primary: #0284c7; 
-            --primary-dark: #0369a1;
-            --text-main: #1e293b; 
-            --text-dim: #64748b; 
-            --border: #e2e8f0; 
-            --accent: #0f172a;
-        }
-        body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 30px 20px; font-size: 14px; line-height: 1.5; }
-        .wrapper { max-width: 800px; margin: auto; }
-        header { text-align: center; padding: 20px 0 40px 0; }
-        .logo-text { font-size: 2.5rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; }
-        .inst-tag { font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-top: 5px; }
-        .section-card { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 16px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        h3 { font-size: 1rem; color: var(--accent); text-transform: uppercase; margin-top: 0; margin-bottom: 20px; border-bottom: 2px solid var(--border); padding-bottom: 10px; font-weight: 700; }
-        .agreement-box { background: #f1f5f9; border: 1px solid var(--border); padding: 20px; border-radius: 10px; height: 300px; overflow-y: scroll; font-size: 0.85rem; line-height: 1.7; color: var(--text-main); margin-bottom: 20px; }
-        label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-main); margin-bottom: 8px; }
-        input, select { width: 100%; background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; color: var(--text-main); margin-bottom: 20px; box-sizing: border-box; font-size: 0.9rem; }
-        input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1); }
-        
-        /* Estilos del Canvas de Firma */
-        .signature-container { margin-bottom: 20px; }
-        canvas { width: 100%; height: 150px; background: #ffffff; border: 1px solid var(--border); border-radius: 8px; cursor: crosshair; touch-action: none; }
-        .btn-clear { background: #64748b; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 0.75rem; cursor: pointer; margin-top: 8px; font-weight: 600; text-transform: uppercase; }
-        .btn-clear:hover { background: #475569; }
-
-        .btn-green { display: block; text-align: center; background: #10b981; color: white; width: 100%; padding: 18px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; text-transform: uppercase; font-size: 0.95rem; transition: background 0.2s; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2); }
-        .btn-green:hover { background: #059669; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alianza Estratégica - | CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #02060d; --card: #0b111d; --primary: #0084ff; --text-main: #ffffff; --text-dim: #94a3b8; --border: rgba(255,255,255,0.08); }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 20px; font-size: 13px; }
+        .wrapper { max-width: 700px; margin: auto; }
+        header { text-align: center; padding: 30px 0; }
+        .logo-text { font-size: 2.2rem; font-weight: 700; color: #fff; letter-spacing: -1px; }
+        .inst-tag { font-size: 0.65rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .section-card { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 16px; margin-bottom: 20px; }
+        h3 { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .agreement-box { background: #050a14; border: 1px solid var(--border); padding: 15px; border-radius: 8px; height: 300px; overflow-y: scroll; font-size: 0.8rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 20px; }
+        label { display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: 6px; }
+        input, select { width: 100%; background: #050a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px; color: white; margin-bottom: 15px; box-sizing: border-box; }
+        .table-sedes { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+        .table-sedes th, .table-sedes td { border: 1px solid var(--border); padding: 8px; text-align: center; font-size: 0.75rem; }
+        .btn-green { display: block; text-align: center; background: #00c853; color: white; width: 100%; padding: 16px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; text-transform: uppercase; }
+    </style>
 </head>
 <body>
 <div class="wrapper">
-    <header>
-        <div class="logo-text">CAMPUSLA</div>
-        <div class="inst-tag">Convenio Marco de Alianza Estratégica y Alta Seguridad</div>
-    </header>
+    <header>
+        <div class="logo-text">CAMPUSLA</div>
+        <div class="inst-tag">ALIANZA ESTRATÉGICA</div>
+    </header>
 
-    <form action="https://formsubmit.co/eatramites1@gmail.com" method="POST" id="allianceForm">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
-        <!-- Input oculto para capturar la firma en base64 -->
-        <input type="hidden" name="Firma_Digital" id="firmaInput">
+    <form action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
 
-        <!-- BLOQUE DE DATOS DE LA INSTITUCIÓN ALIADA Y PROCTOR -->
-        <section class="section-card">
-            <h3>1. Datos de la Institución Aliada y Supervisor (Proctor)</h3>
-            <label for="institucion">Nombre de la Institución Aliada:</label>
-            <input type="text" id="institucion" name="Institucion_Aliada" placeholder="Ej. Instituto / Universidad ..." required>
+        <section class="section-card">
+            <h3>Acuerdo de Colaboración (Agreement)</h3>
+            <<div class="agreement-box">
+    <strong>OBJETO:</strong> 
+    <br>CONVENIO DE ALIANZA ESTRATÉGICA Y OPERACIÓN ACADÉMICA
+Campus Latinoamérica & U Virtual de México
+ENTRE:
+CAMPUS LATINOAMÉRICA, representada por Hollman Álvarez Salamanca, y la U VIRTUAL DE MÉXICO, rector  institución Aliada.
+1. OBJETO
+Las partes acuerdan sumar esfuerzos para integrar el ecosistema de certificaciones internacionales de CAMPUSLA dentro de la infraestructura técnica de la U VIRTUAL DE MÉXICO, permitiendo que su comunidad realice evaluaciones bajo estándares globales en sus propias instalaciones.
+2. ANEXO TÉCNICO: ECOSISTEMA DE CERTIFICACIÓN
+La U VIRTUAL DE MÉXICO tendrá acceso exclusivo para administrar las siguientes soluciones de alto perfil:
+Certificación	Especialidad
+Oxford Test of English (OTE)	Adaptativo, 100% online, resultados en 48 horas.
+TOEFL ITP (ETS)	Estándar institucional para procesos de grado y becas.
+TOEFL iBT (ETS)	Estándar global para movilidad académica y profesional.
+TOEIC (ETS)	Liderazgo en competencias de inglés profesional.
+Linguaskill (Cambridge)	Evaluación basada en IA para entornos masivos.
+Trinity College London	Evaluación británica de competencias comunicativas.
+Pearson VUE & Oracle	Certificaciones técnicas en Cloud, IA y Programación.
+English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
+3. CLÁUSULA DE PROTECCIÓN Y EXCLUSIVIDAD ESTRATÉGICA
+Para garantizar la sostenibilidad y el éxito de esta alianza:
+•	Exclusividad Mutua: Durante la vigencia de este convenio, CAMPUSLA reconoce a la U VIRTUAL DE MÉXICO como su aliado estratégico preferente en su zona de influencia para la administración de este ecosistema; recíprocamente, la U VIRTUAL DE MÉXICO acuerda canalizar a través de CAMPUSLA toda la gestión, soporte y escalabilidad de las certificaciones aquí listadas, protegiendo así el know-how y la integridad del ecosistema compartido.
+•	Blindaje de Propiedad Intelectual: Toda la metodología, protocolos de proctoring y flujos de trabajo transferidos por CAMPUSLA son propiedad  intelectual protegida. EL ALIADO se compromete a no replicar el modelo de operación de forma independiente ni con terceros, asegurando que la alianza sea la vía única y exclusiva de ejecución.
+4. MODELO DE NEGOCIO (ON-DEMAND)
+•	Cero Costos Fijos: Inversión inicial de $0. Sin membresías ni pagos por anticipado.
+•	Modelo de Pago: Pago exclusivo por demanda (licencias efectivamente presentadas).
+•	Rentabilidad: Margen escalable entre $58,000 y $100,000 COP por licencia, con plena autonomía de la Universidad para definir tarifas adicionales por servicios de valor agregado.
+5. COOPERACIÓN E IMPLEMENTACIÓN
+Las partes se comprometen a desplegar los esfuerzos técnicos y humanos necesarios para la efectiva ejecución del objeto del presente convenio. La implementación operativa, la designación de personal de supervisión técnica (proctoring) y las estrategias de promoción y posicionamiento serán coordinadas mediante actas de concertación o anexos técnicos, los cuales formarán parte integral del presente acuerdo.
+6. DURACIÓN Y VIGENCIA
+Cinco (5) años renovables. La exclusividad protege la inversión técnica y el despliegue de marca realizado por ambas partes.
+En señal de conformidad, se suscribe en Colombia junio de 2026:
 
-            <label for="nombre_proctor">Nombre Completo del Proctor (Supervisor Autorizado):</label>
-            <input type="text" id="nombre_proctor" name="Nombre_Proctor" placeholder="Nombre y Apellidos" required>
+Firma.
+Hollman Álvarez Salamanca
+Líder de Globalización | Campus Latinoamérica
 
-            <label for="cedula_proctor">Cédula / Documento de Identidad del Proctor:</label>
-            <input type="text" id="cedula_proctor" name="Cedula_Proctor" placeholder="Número de documento" required>
-        </section>
 
-        <!-- ACUERDO Y CLÁUSULAS -->
-        <section class="section-card">
-            <h3>2. Términos del Convenio y Protocolo de Integridad</h3>
-            <div class="agreement-box">
-                <strong>OBJETO:</strong> CONVENIO DE ALIANZA ESTRATÉGICA, OPERACIÓN ACADÉMICA Y PROTOCOLO INTERNACIONAL DE ALTA SEGURIDAD Y PROCTORING.<br><br>
-                
-                <strong>ENTRE:</strong> CAMPUS LATINOAMÉRICA (CampusLA), representada por su Dirección de Expansión Global, y la Institución Aliada especificada.<br><br>
+Directivo Institución Aliada
+Firma.
+Rector | y/o persona aliada en representación.
 
-                <strong>1. ALCANCE Y ECOSISTEMA DE CERTIFICACIÓN:</strong><br>
-                La institución aliada tendrá acceso para administrar soluciones de evaluación internacional de alto perfil (Oxford Test of English, TOEFL ITP/iBT, TOEIC, Linguaskill, Trinity College, Pearson VUE & Oracle, entre otros) bajo los estándares globales de calidad y supervisión estricta.<br><br>
+<br>
+    <strong>EXCLUSIVIDAD:</strong> 
+    <br>
 
-                <strong>2. PROTOCOLO DE PROCTORING Y SUPERVISIÓN ESTRICTA:</strong><br>
-                La aplicación de pruebas exigirá validación biométrica de identidad pre-examen mediante documento original/pasaporte, monitoreo continuo y grabación multi-ángulo (video, audio y entorno 360°), así como bloqueo de pantalla mediante navegadores seguros. El Proctor Oficial designado tendrá la potestad irrevocable de suspender y anular de inmediato la prueba ante cualquier conducta sospechosa, presencia de terceros o uso de auxiliares externos.<br><br>
 
-                <strong>3. JURAMENTO DE NO FRAUDE Y DIPLOMACIA INTERNACIONAL:</strong><br>
-                Bajo solemne juramento de integridad académica y en estricto cumplimiento de los estándares exigidos por misiones diplomáticas, embajadas y agencias gubernamentales de los Estados Unidos y la Unión Europea, las partes declaran que las certificaciones emitidas constituyen instrumentos de movilidad y cooperación internacional. La institución aliada se compromete a velar por la inalienabilidad de las pruebas, previniendo cualquier forma de fraude, suplantación o violación a los protocolos de seguridad.<br><br>
+Asunto:
+Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – México – 
+www.campuslatinoamerica.edu.co
+Aquí podrás ver nuestra Experiencia y descargar nuestro portafolio: https://campusla.github.io/hub-campusla-branding/
 
-                <strong>4. CLÁUSULA DE NO COMPETENCIA (POST-TERMINACIÓN DE 3 AÑOS):</strong><br>
-                Para salvaguardar la propiedad intelectual, el *know-how* y la infraestructura tecnológica transferida, se acuerda expresamente que en caso de terminación anticipada o finalización del presente convenio por cualquier causa, <strong>la Institución Aliada tendrá prohibido de manera absoluta celebrar convenios, alianzas o contratos directos con las mismas casas certificadoras internacionales</strong> (ETS, Oxford, Cambridge, Pearson, Trinity, etc.) durante un periodo mínimo de <strong>tres (3) años</strong> contados a partir de la fecha de terminación.<br><br>
+Nuestra Plataforma oficia: www.campuslatinoamerica.edu.co 
+________________________________________
+Estimados(as), DR. Directivo institución Aliada.
+Rector.
+Reciban un cordial saludo.
+Campus Latinoamérica & institución Aliada.
+1. Visión y Compromiso Institucional
+Es un honor para Campus Latinoamérica formalizar esta invitación estratégica a su institución. Nuestra misión es democratizar el acceso a la excelencia académica mediante un ecosistema de certificación global de alto perfil. Estamos comprometidos con una alianza que posicione a la Universidad como el referente regional en competencias internacionales, integrando un alcance sin precedentes en México y Colombia.
 
-                <strong>5. MODELO ECONÓMICO ON-DEMAND:</strong><br>
-                Cero costos fijos iniciales. La adquisición de licencias operará estrictamente por demanda efectiva de exámenes presentados, garantizando autonomía tarifaria a la institución aliada para servicios de valor agregado.
-            </div>
-        </section>
+2. El Ecosistema de Certificación (Big Five y Aliados)
+La Universidad tendrá acceso para administrar y certificar bajo nuestro ecosistema global:
+Certificación	Especialidad
+Oxford Test of English (OTE)	Adaptativo, 100% online, resultados en 48 horas.
+TOEFL ITP (ETS)	Estándar institucional para procesos de grado y becas.
+TOEFL iBT (ETS)	El estándar global para movilidad académica y profesional.
+TOEIC (ETS)	Certificación líder en competencias de inglés profesional.
+Linguaskill (Cambridge)	Evaluación basada en IA para entornos masivos.
+Trinity College London	Evaluación británica de competencias comunicativas.
+Pearson VUE & Oracle	Certificaciones técnicas en Cloud, IA y Programación.
+English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
+3. Modelo de Negocio y Rentabilidad
+•	Alcance Geográfico: Operación habilitada en Barranquilla y ciudades estratégicas adicionales en Colombia o México bajo indicación de la Universidad.
+•	Validez Internacional: Certificados con validez global inmediata, sin necesidad de trámites de apostillamiento.
+•	Inversión: $0 pesos de entrada. Sin costos de afiliación, membresía ni pagos por anticipado.
+•	Utilidad: Margen escalable según volumen (rango de 1 a 100 licencias): entre $58,000 y $100,000 COP por licencia.
+•	Autonomía Tarifaria: La Universidad Virtual de México tiene plena autonomía para establecer tarifas adicionales por servicios de valor agregado: preparación, capacitación, asesorías (mentoring) y talleres de refuerzo.
+4. Fortalezas Operativas y Requisitos
+•	Infraestructura: Requerimiento base de dos (2) equipos de cómputo, conexión a internet, audífonos y espacio adecuado.
+•	Versatilidad: Opción de aplicación presencial o modalidad Home Edition (desde casa).
+•	Seguridad: Sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua.
+5. Beneficios de Branding, Marketing y Posicionamiento
+•	Autoridad de Marca: Uso autorizado de los logotipos oficiales de las casas certificadoras en toda la publicidad institucional.
+•	Aliado Principal: Designación de la Universidad como nuestro aliado exclusivo y principal en su zona de influencia.
+•	Estrategia de Front: Campus Latinoamérica servirá como plataforma de difusión, posicionando a la Universidad en nuestros portales web y redes oficiales, garantizando un flujo constante de referidos y alumnos interesados en sus programas académicos, aprovechando nuestra comunidad de +15,000 usuarios anuales.
+•	Coordinación de equipos: Acceso a manuales de marca y soporte de nuestros equipos de marketing para asegurar una promoción unificada y de alto impacto.
+6. Hoja de Ruta: Pasos a Seguir
+1.	Formalización: Firma del Agreement de alianza estratégica (documento anexo).
+2.	Designación de Talento: La Universidad asignará a una persona encargada como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
+3.	Activación: Entrega de kits de marca, manuales de uso y coordinación con los equipos de promoción para el despliegue inmediato.
 
-        <!-- BLOQUE DE FIRMA TÁCTICA / CANVAS -->
-        <section class="section-card">
-            <h3>3. Firma Digital de Aceptación</h3>
-            <label>Firme en el recuadro usando el dedo o el mouse:</label>
-            <div class="signature-container">
-                <canvas id="signatureCanvas"></canvas>
-                <button type="button" class="btn-clear" id="clearBtn">Limpiar Firma</button>
-            </div>
-        </section>
 
-        <button type="submit" class="btn-green" id="submitBtn">Suscribir y Enviar Aceptación de Alianza</button>
-    </form>
+
+
+
+Agradecemos la confianza en Campus Latinoamérica. Estamos listos para ejecutar este proyecto, transformando la educación virtual en una puerta de entrada al mundo. Nos proyectamos como el hito operativo donde la infraestructura y los convenios estarán plenamente desplegados. Estamos seguros de que esta alianza marcará un antes y un después en la educación superior de México y Colombia.
+
+Atentamente,
+
+
+
+Hollman Álvarez Salamanca.
+Líder de Globalización
+[contacto@campuslatinoamerica.edu.co](mailto:contacto@campuslatinoamerica.edu.co)
+◻	[www.campuslatinoamerica.edu.co](http://www.ca mpuslatinoamerica.edu.co)
+◻ +57 314 436 5569
+<br>
+    <strong>OPERACIÓN:</strong> 
 </div>
 
-<script>
-    const canvas = document.getElementById('signatureCanvas');
-    const ctx = canvas.getContext('2d');
-    let painting = false;
+<div class="conditions-box">
+    <strong>CONDICIONES:</strong>
+    <br><br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alianza Estratégica | CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #02060d; --card: #0b111d; --primary: #0084ff; --text: #ffffff; --border: rgba(255,255,255,0.1); }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 40px 20px; }
+        .wrapper { max-width: 800px; margin: auto; }
+        .section { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 20px; margin-bottom: 25px; }
+        h3 { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; margin-top: 0; }
+        .box { width: 100%; height: 150px; background: #050a14; border: 1px solid var(--border); color: #fff; padding: 15px; border-radius: 10px; margin-bottom: 10px; overflow-y: scroll; box-sizing: border-box; }
+        input { width: 100%; background: #050a14; border: 1px solid var(--border); padding: 15px; color: white; border-radius: 10px; margin-bottom: 10px; box-sizing: border-box; }
+        #firma-display { font-family: 'Brush Script MT', cursive; font-size: 3rem; text-align: center; color: var(--primary); min-height: 80px; }
+        canvas { width: 100%; height: 150px; background: #050a14; border: 1px solid var(--border); border-radius: 10px; cursor: crosshair; }
+        .btn { width: 100%; padding: 20px; background: var(--primary); color: white; border: none; border-radius: 10px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+            
+            <div class="section">
+                <h3>Agreement</h3>
+                <div class="box" contenteditable="true" name="Agreement">
 
-    // Ajustar resolución del canvas
-    function resizeCanvas() {
-        const rect = canvas.getBoundingClientRect();
-        canvas.width = rect.width;
-        canvas.height = rect.height;
-        ctx.strokeStyle = '#0f172a';
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-    }
-    window.addEventListener('load', resizeCanvas);
-    window.addEventListener('resize', resizeCanvas);
+Asunto:
+Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – México – 
+www.campuslatinoamerica.edu.co
+Aquí podrás ver nuestra Experiencia y descargar nuestro portafolio: https://campusla.github.io/hub-campusla-branding/
 
-    function startPosition(e) {
-        painting = true;
-        draw(e);
-    }
+Nuestra Plataforma oficia: www.campuslatinoamerica.edu.co 
+________________________________________
+Estimados(as), 
+Rector.
+Reciban un cordial saludo.
+Campus Latinoamérica & Universidad Virtual de México
+1. Visión y Compromiso Institucional
+Es un honor para Campus Latinoamérica formalizar esta invitación estratégica. Nuestra misión es democratizar el acceso a la excelencia académica mediante un ecosistema de certificación global de alto perfil. Estamos comprometidos con una alianza que posicione a la Universidad como el referente regional en competencias internacionales, integrando un alcance sin precedentes en México y Colombia.
 
-    function endPosition() {
-        painting = false;
-        ctx.beginPath();
-    }
+2. El Ecosistema de Certificación (Big Five y Aliados)
+La Universidad tendrá acceso para administrar y certificar bajo nuestro ecosistema global:
+Certificación	Especialidad
+Oxford Test of English (OTE)	Adaptativo, 100% online, resultados en 48 horas.
+TOEFL ITP (ETS)	Estándar institucional para procesos de grado y becas.
+TOEFL iBT (ETS)	El estándar global para movilidad académica y profesional.
+TOEIC (ETS)	Certificación líder en competencias de inglés profesional.
+Linguaskill (Cambridge)	Evaluación basada en IA para entornos masivos.
+Trinity College London	Evaluación británica de competencias comunicativas.
+Pearson VUE & Oracle	Certificaciones técnicas en Cloud, IA y Programación.
+English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
+3. Modelo de Negocio y Rentabilidad
+•	Alcance Geográfico: Operación habilitada en Barranquilla y ciudades estratégicas adicionales en Colombia o México bajo indicación de la Universidad.
+•	Validez Internacional: Certificados con validez global inmediata, sin necesidad de trámites de apostillamiento.
+•	Inversión: $0 pesos de entrada. Sin costos de afiliación, membresía ni pagos por anticipado.
+•	Utilidad: Margen escalable según volumen (rango de 1 a 100 licencias): entre $58,000 y $100,000 COP por licencia.
+•	Autonomía Tarifaria: La Universidad Virtual de México tiene plena autonomía para establecer tarifas adicionales por servicios de valor agregado: preparación, capacitación, asesorías (mentoring) y talleres de refuerzo.
+4. Fortalezas Operativas y Requisitos
+•	Infraestructura: Requerimiento base de dos (2) equipos de cómputo, conexión a internet, audífonos y espacio adecuado.
+•	Versatilidad: Opción de aplicación presencial o modalidad Home Edition (desde casa).
+•	Seguridad: Sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua.
+5. Beneficios de Branding, Marketing y Posicionamiento
+•	Autoridad de Marca: Uso autorizado de los logotipos oficiales de las casas certificadoras en toda la publicidad institucional.
+•	Aliado Principal: Designación de la Universidad como nuestro aliado exclusivo y principal en su zona de influencia.
+•	Estrategia de Front: Campus Latinoamérica servirá como plataforma de difusión, posicionando a la Universidad en nuestros portales web y redes oficiales, garantizando un flujo constante de referidos y alumnos interesados en sus programas académicos, aprovechando nuestra comunidad de +15,000 usuarios anuales.
+•	Coordinación de equipos: Acceso a manuales de marca y soporte de nuestros equipos de marketing para asegurar una promoción unificada y de alto impacto.
+6. Hoja de Ruta: Pasos a Seguir
+1.	Formalización: Firma del Agreement de alianza estratégica (documento anexo).
+2.	Designación de Talento: La Universidad asignará a una persona encargada como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
+3.	Activación: Entrega de kits de marca, manuales de uso y coordinación con los equipos de promoción para el despliegue inmediato.
 
-    function draw(e) {
-        if (!painting) return;
-        e.preventDefault();
-        
-        const rect = canvas.getBoundingClientRect();
-        const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-        const clientY = e.clientY || (e.touches && e.touches[0].clientY);
-        
-        const x = clientX - rect.left;
-        const y = clientY - rect.top;
 
-        ctx.lineTo(x, y);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-    }
+Agradecemos la confianza en Campus Latinoamérica. Estamos listos para ejecutar este proyecto, transformando la educación virtual en una puerta de entrada al mundo. Nos proyectamos como el hito operativo donde la infraestructura y los convenios estarán plenamente desplegados. Estamos seguros de que esta alianza marcará un antes y un después en la educación superior de México y Colombia.
+Atentamente,
 
-    // Eventos Mouse
-    canvas.addEventListener('mousedown', startPosition);
-    canvas.addEventListener('mouseup', endPosition);
-    canvas.addEventListener('mousemove', draw);
+Hollman Álvarez Salamanca.
+Líder de Globalización
+[contacto@campuslatinoamerica.edu.co](mailto:contacto@campuslatinoamerica.edu.co)
+◻	[www.campuslatinoamerica.edu.co](http://www.ca mpuslatinoamerica.edu.co)
+◻ +57 314 436 5569
+</div>
+            </div>
 
-    // Eventos Touch (Móviles / Tablets)
-    canvas.addEventListener('touchstart', startPosition);
-    canvas.addEventListener('touchend', endPosition);
-    canvas.addEventListener('touchmove', draw);
+            <div class="section">
+                <h3>Condiciones</h3>
+                <div class="box" contenteditable="true" name="Condiciones">Fortalezas Operativas y Requisitos
+•	Infraestructura: Requerimiento base de dos (2) equipos de cómputo, conexión a internet, audífonos y espacio adecuado.
+•	Versatilidad: Opción de aplicación presencial o modalidad Home Edition (desde casa).
+•	Seguridad: Sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua.
+5. Beneficios de Branding, Marketing y Posicionamiento
+•	Autoridad de Marca: Uso autorizado de los logotipos oficiales de las casas certificadoras en toda la publicidad institucional.
+•	Aliado Principal: Designación de la Universidad como nuestro aliado exclusivo y principal en su zona de influencia.
+•	Estrategia de Front: Campus Latinoamérica servirá como plataforma de difusión, posicionando a la Universidad en nuestros portales web y redes oficiales, garantizando un flujo constante de referidos y alumnos interesados en sus programas académicos, aprovechando nuestra comunidad de +15,000 usuarios anuales.
+•	Coordinación de equipos: Acceso a manuales de marca y soporte de nuestros equipos de marketing para asegurar una promoción unificada y de alto impacto.
+6. Hoja de Ruta: Pasos a Seguir
+1.	Formalización: Firma del Agreement de alianza estratégica (documento anexo).
+2.	Designación de Talento: La Universidad asignará a una persona encargada como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
+3.	Activación: Entrega de kits de marca, manuales de uso y coordinación con los equipos de promoción para el despliegue inmediato.
 
-    // Botón Limpiar
-    document.getElementById('clearBtn').addEventListener('click', () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    });
 
-    // Capturar firma antes de enviar
-    document.getElementById('allianceForm').addEventListener('submit', function(e) {
-        const dataURL = canvas.toDataURL('image/png');
-        document.getElementById('firmaInput').value = dataURL;
-    });
-</script>
-</body>
-</html>
+
+</div>
+            </div>
+
+            <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alianza Estratégica - | CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #02060d; --card: #0b111d; --primary: #0084ff; --text-main: #ffffff; --text-dim: #94a3b8; --border: rgba(255,255,255,0.08); }
+        body { background-color: var(--bg); color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 20px; font-size: 13px; }
+        .wrapper { max-width: 700px; margin: auto; }
+        header { text-align: center; padding: 30px 0; }
+        .logo-text { font-size: 2.2rem; font-weight: 700; color: #fff; letter-spacing: -1px; }
+        .inst-tag { font-size: 0.65rem; color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .section-card { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 16px; margin-bottom: 20px; }
+        h3 { font-size: 0.9rem; color: var(--primary); text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        .agreement-box { background: #050a14; border: 1px solid var(--border); padding: 15px; border-radius: 8px; height: 300px; overflow-y: scroll; font-size: 0.8rem; line-height: 1.6; color: var(--text-dim); margin-bottom: 20px; }
+        label { display: block; font-size: 0.75rem; color: var(--text-dim); margin-bottom: 6px; }
+        input, select { width: 100%; background: #050a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px; color: white; margin-bottom: 15px; box-sizing: border-box; }
+        .table-sedes { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+        .table-sedes th, .table-sedes td { border: 1px solid var(--border); padding: 8px; text-align: center; font-size: 0.75rem; }
+        .btn-green { display: block; text-align: center; background: #00c853; color: white; width: 100%; padding: 16px; border-radius: 10px; font-weight: 700; border: none; cursor: pointer; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="logo-text">CAMPUSLA</div>
+        <div class="inst-tag">ALIANZA ESTRATÉGICA</div>
+    </header>
+
+    <form action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+
+        <section class="section-card">
+            <h3>Acuerdo de Colaboración (Agreement)</h3>
+            <<div class="agreement-box">
+    <strong>OBJETO:</strong> 
+    <br>CONVENIO DE ALIANZA ESTRATÉGICA Y OPERACIÓN ACADÉMICA
+Campus Latinoamérica & institución Aliada.
+ENTRE:
+CAMPUS LATINOAMÉRICA, representada por Hollman Álvarez Salamanca, y la institución Aliada..
+1. OBJETO
+Las partes acuerdan sumar esfuerzos para integrar el ecosistema de certificaciones internacionales de CAMPUSLA dentro de la infraestructura técnica de la institución Aliada., permitiendo que su comunidad realice evaluaciones bajo estándares globales en sus propias instalaciones.
+2. ANEXO TÉCNICO: ECOSISTEMA DE CERTIFICACIÓN
+La institución Aliada. tendrá acceso exclusivo para administrar las siguientes soluciones de alto perfil:
+Certificación	Especialidad
+Oxford Test of English (OTE)	Adaptativo, 100% online, resultados en 48 horas.
+TOEFL ITP (ETS)	Estándar institucional para procesos de grado y becas.
+TOEFL iBT (ETS)	Estándar global para movilidad académica y profesional.
+TOEIC (ETS)	Liderazgo en competencias de inglés profesional.
+Linguaskill (Cambridge)	Evaluación basada en IA para entornos masivos.
+Trinity College London	Evaluación británica de competencias comunicativas.
+Pearson VUE & Oracle	Certificaciones técnicas en Cloud, IA y Programación.
+English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
+3. CLÁUSULA DE PROTECCIÓN Y EXCLUSIVIDAD ESTRATÉGICA
+Para garantizar la sostenibilidad y el éxito de esta alianza:
+•	Exclusividad Mutua: Durante la vigencia de este convenio, CAMPUSLA reconoce a la institución Aliada. como su aliado estratégico preferente en su zona de influencia para la administración de este ecosistema; recíprocamente, la institución Aliada.acuerda canalizar a través de CAMPUSLA toda la gestión, soporte y escalabilidad de las certificaciones aquí listadas, protegiendo así el know-how y la integridad del ecosistema compartido.
+•	Blindaje de Propiedad Intelectual: Toda la metodología, protocolos de proctoring y flujos de trabajo transferidos por CAMPUSLA son propiedad  intelectual protegida. EL ALIADO se compromete a no replicar el modelo de operación de forma independiente ni con terceros, asegurando que la alianza sea la vía única y exclusiva de ejecución.
+4. MODELO DE NEGOCIO (ON-DEMAND)
+•	Cero Costos Fijos: Inversión inicial de $0. Sin membresías ni pagos por anticipado.
+•	Modelo de Pago: Pago exclusivo por demanda (licencias efectivamente presentadas).
+•	Rentabilidad: Margen escalable entre $58,000 y $100,000 COP por licencia, con plena autonomía de la Universidad para definir tarifas adicionales por servicios de valor agregado.
+5. COOPERACIÓN E IMPLEMENTACIÓN
+Las partes se comprometen a desplegar los esfuerzos técnicos y humanos necesarios para la efectiva ejecución del objeto del presente convenio. La implementación operativa, la designación de personal de supervisión técnica (proctoring) y las estrategias de promoción y posicionamiento serán coordinadas mediante actas de concertación o anexos técnicos, los cuales formarán parte integral del presente acuerdo.
+6. DURACIÓN Y VIGENCIA
+Cinco (5) años renovables. La exclusividad protege la inversión técnica y el despliegue de marca realizado por ambas partes.
+En señal de conformidad, se suscribe en Colombia junio de 2026:
+
+Firma.
+Hollman Álvarez Salamanca
+Líder de Globalización | Campus Latinoamérica
+
+
+Dr. institución Aliada.
+Firma.
+Rector | institución Aliada.
+
+<br>
+    <strong>EXCLUSIVIDAD:</strong> 
+    <br>
+
+ 
+Asunto:
+Propuesta de Alianza Estratégica para la Administración los exámenes internacionales más importantes del mundo – resolución 018035 de 2021 MEN – Colombia – y otros países – 
+www.campuslatinoamerica.edu.co
+Aquí podrás ver nuestra Experiencia y descargar nuestro portafolio: https://campusla.github.io/hub-campusla-branding/
+
+Nuestra Plataforma oficia: www.campuslatinoamerica.edu.co 
+________________________________________
+Estimados(as), institución Aliada..
+Rector.
+Reciban un cordial saludo.
+Campus Latinoamérica & institución Aliada.
+1. Visión y Compromiso Institucional
+Es un honor para Campus Latinoamérica formalizar esta invitación estratégica a la institución Aliada.. Nuestra misión es democratizar el acceso a la excelencia académica mediante un ecosistema de certificación global de alto perfil. Estamos comprometidos con una alianza que posicione a la Universidad como el referente regional en competencias internacionales, integrando un alcance sin precedentes en Latam y Colombia.
+
+2. El Ecosistema de Certificación (Big Five y Aliados)
+La Universidad tendrá acceso para administrar y certificar bajo nuestro ecosistema global:
+Certificación	Especialidad
+Oxford Test of English (OTE)	Adaptativo, 100% online, resultados en 48 horas.
+TOEFL ITP (ETS)	Estándar institucional para procesos de grado y becas.
+TOEFL iBT (ETS)	El estándar global para movilidad académica y profesional.
+TOEIC (ETS)	Certificación líder en competencias de inglés profesional.
+Linguaskill (Cambridge)	Evaluación basada en IA para entornos masivos.
+Trinity College London	Evaluación británica de competencias comunicativas.
+Pearson VUE & Oracle	Certificaciones técnicas en Cloud, IA y Programación.
+English Discoveries (ETS)	Plataforma oficial de aprendizaje de idiomas.
+3. Modelo de Negocio y Rentabilidad
+•	Alcance Geográfico: Operación habilitada en  ciudades estratégicas adicionales en Colombia o Latam bajo indicación de la Universidad.
+•	Validez Internacional: Certificados con validez global inmediata, sin necesidad de trámites de apostillamiento.
+•	Inversión: $0 pesos de entrada. Sin costos de afiliación, membresía ni pagos por anticipado.
+•	Utilidad: Margen escalable según volumen (rango de 1 a 100 licencias): entre $58,000 y $100,000 COP por licencia.
+•	Autonomía Tarifaria: La Universidad Virtual de Latam tiene plena autonomía para establecer tarifas adicionales por servicios de valor agregado: preparación, capacitación, asesorías (mentoring) y talleres de refuerzo.
+4. Fortalezas Operativas y Requisitos
+•	Infraestructura: Requerimiento base de dos (2) equipos de cómputo, conexión a internet, audífonos y espacio adecuado.
+•	Versatilidad: Opción de aplicación presencial o modalidad Home Edition (desde casa).
+•	Seguridad: Sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua.
+5. Beneficios de Branding, Marketing y Posicionamiento
+•	Autoridad de Marca: Uso autorizado de los logotipos oficiales de las casas certificadoras en toda la publicidad institucional.
+•	Aliado Principal: Designación de la Universidad como nuestro aliado exclusivo y principal en su zona de influencia.
+•	Estrategia de Front: Campus Latinoamérica servirá como plataforma de difusión, posicionando a la Universidad en nuestros portales web y redes oficiales, garantizando un flujo constante de referidos y alumnos interesados en sus programas académicos, aprovechando nuestra comunidad de +15,000 usuarios anuales.
+•	Coordinación de equipos: Acceso a manuales de marca y soporte de nuestros equipos de marketing para asegurar una promoción unificada y de alto impacto.
+6. Hoja de Ruta: Pasos a Seguir
+1.	Formalización: Firma del Agreement de alianza estratégica (documento anexo).
+2.	Designación de Talento: La Universidad asignará a una persona encargada como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
+3.	Activación: Entrega de kits de marca, manuales de uso y coordinación con los equipos de promoción para el despliegue inmediato.
+
+Agradecemos la confianza en Campus Latinoamérica. Estamos listos para ejecutar este proyecto, transformando la educación virtual en una puerta de entrada al mundo. Nos proyectamos como el hito operativo donde la infraestructura y los convenios estarán plenamente desplegados. Estamos seguros de que esta alianza marcará un antes y un después en la educación superior de Latam y Colombia.
+
+Atentamente,
+
+
+Hollman Álvarez Salamanca.
+Líder de Globalización
+[contacto@campuslatinoamerica.edu.co](mailto:contacto@campuslatinoamerica.edu.co)
+◻	[www.campuslatinoamerica.edu.co](http://www.ca mpuslatinoamerica.edu.co)
+◻ +57 314 436 5569
+<br>
+    <strong>OPERACIÓN:</strong> 
+</div>
+
+<div class="conditions-box">
+    <strong>CONDICIONES:</strong>
+    <br><br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alianza Estratégica | CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #02060d; --card: #0b111d; --primary: #0084ff; --text: #ffffff; --border: rgba(255,255,255,0.1); }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 40px 20px; }
+        .wrapper { max-width: 800px; margin: auto; }
+        .section { background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: 20px; margin-bottom: 25px; }
+        h3 { color: var(--primary); font-size: 0.9rem; text-transform: uppercase; margin-top: 0; }
+        .box { width: 100%; height: 150px; background: #050a14; border: 1px solid var(--border); color: #fff; padding: 15px; border-radius: 10px; margin-bottom: 10px; overflow-y: scroll; box-sizing: border-box; }
+        input { width: 100%; background: #050a14; border: 1px solid var(--border); padding: 15px; color: white; border-radius: 10px; margin-bottom: 10px; box-sizing: border-box; }
+        #firma-display { font-family: 'Brush Script MT', cursive; font-size: 3rem; text-align: center; color: var(--primary); min-height: 80px; }
+        canvas { width: 100%; height: 150px; background: #050a14; border: 1px solid var(--border); borde
