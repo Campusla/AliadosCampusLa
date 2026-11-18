@@ -331,570 +331,533 @@ contacto@campuslatinoamerica.edu.co | www.campuslatinoamerica.edu.co | +57 314 4
             <div class="box" contenteditable="true" name="Condiciones">
 1. RESPONSABILIDAD TÉCNICA E INFRAESTRUCTURA
 - Requerimiento Base: Disponer de un mínimo de dos (2) equipos de cómputo con conexión a internet de alta velocidad, audífonos y un espacio físico adecuado.
-- Versatilidad de Aplicación: Opción de aplicación presencial en sede o mediante modalidad Home Edition (remota supervisada).
-- Seguridad Digital: Obligación de cumplir con el sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua (Proctoring).
-
-2. DOMINIO INTEGRAL DEL ECOSISTEMA Y CAPACITACIÓN
-- Dominio Técnico: La institución aliada se compromete a que su equipo adquiera un dominio completo del funcionamiento, plataformas y requerimientos de cada una de las certificaciones que integran el portafolio.
-- Designación de Talento: La institución asignará un encargado oficial como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
-
-3. USO DE LOGOS Y DIFUSIÓN CORRECTA DE LA INFORMACIÓN
-- Autoridad y Uso de Marca: Uso estrictamente autorizado de los logotipos oficiales de las casas certificadoras y de CAMPUSLA únicamente en piezas de publicidad institucional aprobadas.
-- Difusión Correcta: Garantizar que la información comercial y académica publicada en medios físicos y digitales sea veraz, alineada con los manuales de marca proporcionados.
-- Estrategia de Front: CAMPUSLA respaldará la difusión posicionando a la institución en sus portales web y redes oficiales, asegurando un flujo constante de referidos aprovechando nuestra comunidad de +15,000 usuarios anuales.
-
-4. HOJA DE RUTA Y ACTIVACIÓN INMEDIATA
-1. Formalización: Suscripción digital del acuerdo de alianza estratégica.
-2. Capacitación: Entrenamiento del personal supervisor y entrega de manuales de uso técnico.
-3. Despliegue Operativo: Entrega de kits de marca y apertura formal de agendas de certificación.
-            </div>
-        </div>
-
-        <!-- BLOQUE 3: DATOS Y LEGALIZACIÓN DE LA INSTITUCIÓN -->
-        <div class="section-card">
-            <h3>3. Datos de Legalización de la Institución Aliada</h3>
-
-            <label for="institution_name">Nombre de la Institución Aliada:</label>
-            <input type="text" id="institution_name" name="Institucion_Aliada" required placeholder="Ej: Universidad Aliada de Ejemplo">
-
-            <label for="proctor_name">Nombre del Proctor / Representante Asignado:</label>
-            <input type="text" id="proctor_name" name="Representante_Proctor" required placeholder="Ej: Dr. Carlos Pérez">
-
-            <label for="proctor_cc">Cédula / Documento de Identidad:</label>
-            <input type="text" id="proctor_cc" name="Documento_Identidad" required placeholder="Ej: 12.345.678">
-
-            <label for="proctor_email">Correo Electrónico Institucional:</label>
-            <input type="email" id="proctor_email" name="Correo_Contacto" required placeholder="contacto@institucion.edu.co">
-        </div>
-
-        <form id="convenio-form" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
-    <!-- Configuración de FormSubmit -->
-    <input type="hidden" name="_subject" value="Nuevo Convenio Firmado - CampusLA">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" id="tipo-documento" name="Tipo_Documento" value="Convenio de Alianza y Representación">
-    <input type="hidden" id="detalle-firma" name="Detalle_Firma" value="">
-    <input type="hidden" id="signature-data" name="Firma_Base64" value="">
-
-    <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
-    <div class="section-card">
-        <h3>4. Firma Digital Autorizada — Nuevo Convenio</h3>
-        <p class="doc-badge">Documento: Convenio de Alianza y Representación CampusLA</p>
-        <label for="signature-pad">Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
-        
-        <div class="canvas-wrapper">
-            <canvas id="signature-pad" width="800" height="200"></canvas>
-        </div>
-
-        <p id="signature-error" class="error-msg" style="display: none;">⚠️ Por favor dibuje su firma antes de enviar el convenio.</p>
-        <p id="signature-status" class="status-ok" style="display: none;"></p>
-        
-        <div class="signature-actions">
-            <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
-        </div>
-    </div>
-
-    <!-- BOTÓN DE ENVÍO -->
-    <button type="submit" class="btn-green">Enviar Convenio y Firmar Digitalmente</button>
-</form>
-</body>
-
-<!DOCTYPE html>
+- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alianza Estratégica | CampusLA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Alianza Estratégica - CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --bg: #02060d; 
-            --card: #0b111d; 
-            --primary: #0084ff; 
-            --text: #ffffff; 
-            --border: rgba(255,255,255,0.1); 
+        :root {
+            --bg: #02060d;
+            --card: #0b111d;
+            --primary: #0084ff;
+            --text-main: #ffffff;
             --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
         }
-        body { 
-            background: var(--bg); 
-            color: var(--text); 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            margin: 0; 
-            padding: 40px 20px; 
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
             font-size: 13px;
         }
-        .wrapper { 
-            max-width: 800px; 
-            margin: auto; 
+
+        .wrapper {
+            max-width: 800px;
+            margin: auto;
         }
-        header { 
-            text-align: center; 
-            padding: 20px 0 30px 0; 
+
+        header {
+            text-align: center;
+            padding: 25px 0;
         }
-        .logo-text { 
-            font-size: 2.2rem; 
-            font-weight: 800; 
-            color: #fff; 
-            letter-spacing: -1px; 
+
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
         }
-        .inst-tag { 
-            font-size: 0.65rem; 
-            color: var(--primary); 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
+
+        .inst-tag {
+            font-size: 0.65rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .section { 
-            background: var(--card); 
-            border: 1px solid var(--border); 
-            padding: 30px; 
-            border-radius: 20px; 
-            margin-bottom: 25px; 
+
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 22px;
         }
-        h3 { 
-            color: var(--primary); 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 
-            margin-top: 0; 
+
+        h3 {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 15px;
             border-bottom: 1px solid var(--border);
             padding-bottom: 8px;
         }
-        .box { 
-            width: 100%; 
-            height: 320px; 
-            background: #050a14; 
-            border: 1px solid var(--border); 
-            color: var(--text-dim); 
-            padding: 20px; 
-            border-radius: 10px; 
-            margin-bottom: 10px; 
-            overflow-y: scroll; 
-            box-sizing: border-box; 
-            font-size: 0.82rem; 
-            line-height: 1.7; 
-            white-space: pre-wrap; 
-            word-wrap: break-word; 
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
         }
-        label { 
-            display: block; 
-            font-size: 0.8rem; 
-            color: var(--text-dim); 
-            margin-bottom: 6px; 
-            font-weight: 600; 
+
+        .resource-card {
+            background: #0f172a;
+            padding: 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid var(--border);
+            text-align: center;
+            display: block;
         }
-        input, select { 
-            width: 100%; 
-            background: #050a14; 
-            border: 1px solid var(--border); 
-            padding: 12px; 
-            color: white; 
-            border-radius: 10px; 
-            margin-bottom: 15px; 
-            box-sizing: border-box; 
-            font-size: 0.9rem; 
+
+        .resource-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
         }
-        canvas { 
-            width: 100%; 
-            height: 160px; 
-            background: #050a14; 
-            border: 2px dashed var(--border); 
-            border-radius: 10px; 
-            cursor: crosshair; 
-            display: block; 
-            margin-top: 5px;
+
+        .box {
+            width: 100%;
+            height: 300px;
+            background: #050a14;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            font-size: 0.82rem;
+            line-height: 1.65;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
-        .btn { 
-            width: 100%; 
-            padding: 18px; 
-            background: var(--primary); 
-            color: white; 
-            border: none; 
-            border-radius: 10px; 
-            font-weight: 800; 
-            cursor: pointer; 
-            text-transform: uppercase; 
-            font-size: 1rem;
-            transition: background 0.2s;
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+            font-weight: 600;
         }
-        .btn:hover {
-            background: #006be6;
+
+        input, select {
+            width: 100%;
+            background: #050a14;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 11px;
+            color: #ffffff;
+            margin-bottom: 14px;
+            box-sizing: border-box;
+            font-size: 0.9rem;
         }
+
+        .table-sedes {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table-sedes th, .table-sedes td {
+            border: 1px solid var(--border);
+            padding: 8px;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        .table-sedes input {
+            margin-bottom: 0;
+            padding: 8px;
+        }
+
+        .doc-badge {
+            display: inline-block;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .canvas-wrapper {
+            width: 100%;
+            margin-top: 10px;
+            border: 2px dashed #64748b;
+            border-radius: 10px;
+            background-color: #ffffff;
+            overflow: hidden;
+            touch-action: none;
+        }
+
+        #signature-pad {
+            display: block;
+            width: 100%;
+            height: 200px;
+            cursor: crosshair;
+            background-color: #ffffff;
+        }
+
+        .signature-actions {
+            margin-top: 12px;
+        }
+
         .btn-secondary {
             background: #334155;
-            color: white;
+            color: #ffffff;
             border: none;
             padding: 10px 16px;
             border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
             font-size: 0.8rem;
+        }
+
+        .btn-green {
+            display: block;
+            text-align: center;
+            background: #00c853;
+            color: #ffffff;
+            width: 100%;
+            padding: 17px;
+            border-radius: 10px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 22px;
+        }
+
+        .error-msg {
+            color: #f87171;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .status-ok {
+            color: #4ade80;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .planb-text {
+            font-size: 0.8rem;
+            color: var(--text-dim);
             margin-bottom: 15px;
         }
-        .btn-secondary:hover {
-            background: #475569;
+
+        .planb-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .btn-planb {
+            background: #334155;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 20px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="logo-text">CAMPUSLA</div>
-            <div class="inst-tag">PORTAL OFICIAL DE ALIANZAS ESTRATÉGICAS</div>
-        </header>
+<div class="wrapper">
+    <header>
+        <div class="logo-text">CAMPUSLA</div>
+        <div class="inst-tag">ALIANZA ESTRATÉGICA Y OPERACIÓN ACADÉMICA</div>
+    </header>
 
-        <form action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
-            
-            <!-- Configuraciones ocultas de FormSubmit -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
-
-            <!-- BLOQUE 1: ACUERDO / AGREEMENT -->
-            <div class="section">
-                <h3>Agreement (Convenio Marco)</h3>
-                <div class="box" contenteditable="true" name="Agreement">
-CONVENIO MARCO DE ALIANZA ESTRATÉGICA, OPERACIÓN ACADÉMICA Y PROTOCOLO INTERNACIONAL
-
-Plataforma Oficial: www.campuslatinoamerica.edu.co
-Portafolio y Experiencia: https://campusla.github.io/hub-campusla-branding/
-________________________________________
-
-ENTRE LAS PARTES:
-CAMPUS LATINOAMÉRICA, representada por Hollman Álvarez Salamanca (Líder de Operaciones y Expansión Global), y LA INSTITUCIÓN ALIADA, representada por su Rectoría y/o Representación Legal.
-
-1. VISIÓN Y COMPROMISO INSTITUCIONAL
-Es un honor para Campus Latinoamérica formalizar esta alianza estratégica. Nuestra misión es democratizar el acceso a la excelencia académica mediante un ecosistema de certificación global de alto perfil, posicionando a la institución aliada como el referente regional en competencias internacionales bajo estándares sin precedentes.
-
-2. EL ECOSISTEMA DE CERTIFICACIÓN (BIG FIVE Y ALIADOS)
-La institución aliada tendrá acceso exclusivo para administrar y certificar bajo nuestro ecosistema global:
-- Oxford Test of English (OTE): Adaptativo, 100% online, resultados en 48 horas.
-- TOEFL ITP (ETS): Estándar institucional para procesos de grado y becas.
-- TOEFL iBT (ETS): El estándar global para movilidad académica y profesional.
-- TOEIC (ETS): Certificación líder en competencias de inglés profesional.
-- Linguaskill (Cambridge): Evaluación basada en IA para entornos masivos.
-- Trinity College London: Evaluación británica de competencias comunicativas.
-- Pearson VUE & Oracle: Certificaciones técnicas en Cloud, IA y Programación.
-- English Discoveries (ETS): Plataforma oficial de aprendizaje de idiomas.
-
-3. PROTOCOLO INTERNACIONAL DE ALTA SEGURIDAD Y PROCTORING OFICIAL
-- Verificación Identitaria: Validación de documento original y biometría facial previa al examen.
-- Monitoreo Activo: Grabación en tiempo real mediante video, audio, captura 360° y bloqueo de pantalla.
-- Potestad del Proctor: Facultad irrevocable para suspender o anular la prueba ante intentos de suplantación, presencia de terceros o uso de dispositivos no autorizados.
-
-4. DIPLOMACIA ACADÉMICA Y JURAMENTO DE INTEGRIDAD (EE. UU. Y EUROPA)
-Los exámenes constituyen instrumentos de Diplomacia Pública ante embajadas y entes acreditadores internacionales. Bajo solemne juramento de integridad académica, la institución aliada se compromete a velar por la inalienabilidad de los títulos y la absoluta transparencia en la aplicación de las pruebas para procesos consulares y migratorios.
-
-5. PROTECCIÓN, EXCLUSIVIDAD Y NO COMPETENCIA (3 AÑOS POST-TERMINACIÓN)
-- Exclusividad Mutua: Canalización exclusiva a través de CAMPUSLA de la gestión y licenciamiento del ecosistema.
-- Prohibición de Contacto Directo (No Bypassing): Queda estrictamente prohibido negociar o contratar directamente con las casas matrices internacionales.
-- Cláusula de No Competencia (Post-Terminación de 3 Años): En caso de finalización del acuerdo, LA INSTITUCIÓN ALIADA tendrá expresamente prohibido durante un periodo mínimo de tres (3) años realizar acuerdos de representación o contratación directa o indirecta con las mismas casas certificadoras u organizaciones del ecosistema transferido.
-
-6. MODELO DE NEGOCIO, RENTABILIDAD Y AMENDMENTS
-- Validez Internacional: Certificados con validez global inmediata, sin necesidad de trámites de apostillamiento.
-- Inversión Inicial: $0 pesos de entrada. Sin costos de afiliación, membresía ni pagos por anticipado.
-- Utilidad: Margen escalable según volumen (rango de 1 a 100 licencias): entre $58,000 y $100,000 COP por licencia.
-- Autonomía Tarifaria: Plena autonomía institucional para definir tarifas adicionales por servicios de valor agregado: preparación, capacitación, asesorías (mentoring) y talleres de refuerzo.
-- Modificación de Tarifas (Amendments): Actualización anual sujeta a variaciones del IPC o ajustes directos de casas matrices mediante notificación previa con 30 días de anticipación.
-
-Agradecemos la confianza en Campus Latinoamérica. Estamos listos para ejecutar este proyecto, transformando la educación virtual en una puerta de entrada al mundo.
-
-Atentamente,
-
-Hollman Álvarez Salamanca
-Líder de Operaciones y Expansión Global | Campus Latinoamérica
-contacto@campuslatinoamerica.edu.co | www.campuslatinoamerica.edu.co | +57 314 436 5569
-                </div>
-            </div>
-
-            <!-- BLOQUE 2: CONDICIONES OPERATIVAS Y RESPONSABILIDAD TÉCNICA -->
-            <div class="section">
-                <h3>Condiciones y Responsabilidad Técnica</h3>
-                <div class="box" contenteditable="true" name="Condiciones">
-1. RESPONSABILIDAD TÉCNICA E INFRAESTRUCTURA
-- Requerimiento Base: Disponer de un mínimo de dos (2) equipos de cómputo con conexión a internet de alta velocidad, audífonos y un espacio físico adecuado.
-- Versatilidad de Aplicación: Opción de aplicación presencial en sede o mediante modalidad Home Edition (remota supervisada).
-- Seguridad Digital: Obligación de cumplir con el sistema de gestión digital, protocolos de seguridad académica de nivel mundial y supervisión continua (Proctoring).
-
-2. DOMINIO INTEGRAL DEL ECOSISTEMA Y CAPACITACIÓN
-- Dominio Técnico: La institución aliada se compromete a que su equipo adquiera un dominio completo del funcionamiento, plataformas y requerimientos de cada una de las certificaciones que integran el portafolio.
-- Designación de Talento: La institución asignará un encargado oficial como Proctor (Supervisor/Certificador), quien recibirá entrenamiento especializado y certificación directa por parte de Campus Latinoamérica.
-
-3. USO DE LOGOS Y DIFUSIÓN CORRECTA DE LA INFORMACIÓN
-- Autoridad y Uso de Marca: Uso estrictamente autorizado de los logotipos oficiales de las casas certificadoras y de CAMPUSLA únicamente en piezas de publicidad institucional aprobadas.
-- Difusión Correcta: Garantizar que la información comercial y académica publicada en medios físicos y digitales sea veraz, alineada con los manuales de marca proporcionados.
-- Estrategia de Front: CAMPUSLA respaldará la difusión posicionando a la institución en sus portales web y redes oficiales, asegurando un flujo constante de referidos aprovechando nuestra comunidad de +15,000 usuarios anuales.
-
-4. HOJA DE RUTA Y ACTIVACIÓN INMEDIATA
-1. Formalización: Suscripción digital del acuerdo de alianza estratégica.
-2. Capacitación: Entrenamiento del personal supervisor y entrega de manuales de uso técnico.
-3. Despliegue Operativo: Entrega de kits de marca y apertura formal de agendas de certificación.
-                </div>
-            </div>
-
-            <!-- BLOQUE 3: DATOS DE LEGALIZACIÓN -->
-            <div class="section">
-                <h3>Datos de Legalización de la Institución Aliada</h3>
-
-                <label for="institution_name">Nombre de la Institución Aliada:</label>
-                <input type="text" id="institution_name" name="Institucion_Aliada" required placeholder="Ej: Universidad Aliada de Ejemplo">
-
-                <label for="proctor_name">Nombre del Proctor / Representante Asignado:</label>
-                <input type="text" id="proctor_name" name="Representante_Proctor" required placeholder="Ej: Dr. Carlos Pérez">
-
-                <label for="proctor_cc">Cédula / Documento de Identidad:</label>
-                <input type="text" id="proctor_cc" name="Documento_Identidad" required placeholder="Ej: 12.345.678">
-
-                <label for="proctor_email">Correo Electrónico Institucional:</label>
-                <input type="email" id="proctor_email" name="Correo_Contacto" required placeholder="contacto@institucion.edu.co">
-            </div>
-
-            <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
-            <div class="section">
-                <h3>Firma Digital Autorizada</h3>
-                <label>Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
-                <canvas id="signature-pad"></canvas>
-                <input type="hidden" id="signature-data" name="Firma_Digital">
-                
-                <div style="margin-top: 15px;">
-                    <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
-                </div>
-            </div>
-
-            <!-- BOTÓN DE ENVÍO -->
-            <button type="submit" class="btn">Enviar Convenio y Firmar Digitalmente</button>
-
-        </form>
+    <!-- RECURSOS Y CREDENCIALES -->
+    <div class="section">
+        <h3>Recursos y Credenciales</h3>
+        <div class="resources-grid">
+            <a href="https://campusla.github.io/ReconocimientoOficialCampusLA/" target="_blank" class="resource-card">
+                <div class="resource-icon">📜</div>
+                <strong>RECONOCIMIENTO OFICIAL</strong>
+            </a>
+            <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank" class="resource-card">
+                <div class="resource-icon">📊</div>
+                <strong>PORTAFOLIO Y TRACK RECORD</strong>
+            </a>
+            <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="resource-card">
+                <div class="resource-icon">🌐</div>
+                <strong>PLATAFORMA OFICIAL</strong>
+            </a>
+        </div>
     </div>
 
-    <!-- SCRIPT DEL CANVAS DE FIRMA -->
-    <script>
-        const canvas = document.getElementById('signature-pad');
-        const ctx = canvas.getContext('2d');
-        let painting = false;
+    <!-- FORMULARIO PRINCIPAL HACIA FORMSUBMIT -->
+    <form id="convenio-form" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo Convenio Firmado - CampusLA">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+        <input type="hidden" id="tipo-documento" name="Tipo_Documento" value="Nuevo Convenio de Alianza y Representación">
+        <input type="hidden" id="detalle-firma" name="Detalle_Firma" value="">
+        <input type="hidden" id="signature-data" name="Firma_Base64" value="">
 
-        // Ajustar resolución real del canvas
-        function resizeCanvas() {
-            const rect = canvas.getBoundingClientRect();
-            canvas.width = rect.width;
-            canvas.height = rect.height;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        function startPosition(e) {
-            painting = true;
-            draw(e);
-        }
-
-        function endPosition() {
-            painting = false;
-            ctx.beginPath();
-            saveSignature();
-        }
-
-        function draw(e) {
-            if (!painting) return;
-            ctx.lineWidth = 2.5;
-            ctx.lineCap = 'round';
-            ctx.strokeStyle = '#ffffff';
-
-            const rect = canvas.getBoundingClientRect();
-            const x = (e.clientX || e.touches[0].clientX) - rect.left;
-            const y = (e.clientY || e.touches[0].clientY) - rect.top;
-
-            ctx.lineTo(x, y);
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.moveTo(x, y);
-        }
-
-        // Eventos de Mouse
-        canvas.addEventListener('mousedown', startPosition);
-        canvas.addEventListener('mouseup', endPosition);
-        canvas.addEventListener('mousemove', draw);
-
-        // Eventos Táctiles (Móviles / Tablets)
-        canvas.addEventListener('touchstart', (e) => { startPosition(e); e.preventDefault(); });
-        canvas.addEventListener('touchend', (e) => { endPosition(); e.preventDefault(); });
-        canvas.addEventListener('touchmove', (e) => { draw(e); e.preventDefault(); });
-
-        // Botón Limpiar
-        document.getElementById('clear-signature').addEventListener('click', () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            document.getElementById('signature-data').value = '';
-        });
-
-        // Guardar Base64 en campo oculto
-        function saveSignature() {
-            const dataURL = canvas.toDataURL('image/png');
-            document.getElementById('signature-data').value = dataURL;
-        }
-    </script>
-</body>
-
+        <!-- ===================================================================== -->
+        <!-- DOCUMENTACIÓN - BLOQUE 1: AQUÍ PONES EL TEXTO LARGO DEL ACUERDO /     -->
+        <!-- CONVENIO MARCO. Todo lo que escribas dentro de #agreement-box se       -->
+        <!-- sincroniza automáticamente al campo oculto "Agreement" al enviar.     -->
+        <!-- ===================================================================== -->
+        <div class="section">
+            <h3>1. Acuerdo de Colaboración (Agreement)</h3>
+            <div class="box" contenteditable="true" id="agreement-box">
+[AQUÍ PONES EL TEXTO LARGO DEL ACUERDO / CONVENIO / PROPUESTA]
             </div>
-
-            <div class="section">
-    <h3>Firma Digital (Escribe tu nombre)</h3>
-    <p style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 10px;">Escribe tu nombre completo para validar tu firma legal.</p>
-    
-    <input type="text" 
-           name="Firma_Digital" 
-           id="input-firma" 
-           placeholder="Tu nombre completo aquí..." 
-           required 
-           style="width: 100%; padding: 15px; background: #050a14; border: 1px solid var(--primary); border-radius: 8px; color: white; font-size: 1rem; text-transform: uppercase;">
-    
-    <div style="margin-top: 10px; font-family: 'Brush Script MT', cursive; font-size: 1.8rem; color: var(--secondary);" id="preview-firma"></div>
-</div>
-
-<button type="submit" class="btn">FIRMAR ALIANZA</button>
-
-<script>
-    const inputFirma = document.getElementById('input-firma');
-    const previewFirma = document.getElementById('preview-firma');
-
-    inputFirma.addEventListener('input', function() {
-        previewFirma.innerText = this.value;
-    });
-</script>
-</html>
-<div class="section">
-    <h3>Recursos y Credenciales</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-        
-        <a href="https://campusla.github.io/ReconocimientoOficialCampusLA/" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">📜</div>
-            <strong style="font-size: 0.8rem;">RECONOCIMIENTO OFICIAL</strong>
-        </a>
-
-        <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">📊</div>
-            <strong style="font-size: 0.8rem;">PORTAFOLIO Y TRACK RECORD</strong>
-        </a>
-
-        <a href="https://www.campuslatinoamerica.edu.co" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">🌐</div>
-            <strong style="font-size: 0.8rem;">PLATAFORMA OFICIAL</strong>
-        </a>
-    </div>
-</div>
-        <form id="mainForm" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
-
-    <div class="form-grid">
-        <label>Nombres y Apellidos</label>
-        <input type="text" name="Nombre_Completo" required>
-
-        <label>Cédula / Documento</label>
-        <input type="number" name="Cedula" required>
-
-        <label>Correo Institucional</label>
-        <input type="email" name="Correo_1" required>
-
-        <label>Correo Personal</label>
-        <input type="email" name="Correo_2" required>
-
-        <label>Teléfono / WhatsApp</label>
-        <input type="tel" name="Telefono" required>
-
-        <label>Ciudad</label>
-        <input type="text" name="Ciudad" required>
-
-        <label>Firma Digital (Nombre completo)</label>
-        <input type="text" name="Firma_Digital" placeholder="Escribe tu nombre para firmar..." required>
-    </div>
-
-    <button type="submit" class="btn">FINALIZAR RADICACIÓN</button>
-</form>
-
-        <button type="submit" class="btn-green">FIRMAR Y ENVIAR ALIANZA</button>
-    </form>
-
-    <footer>CAMPUSLA DE CLASE MUNDIAL<br>Vidi midi vici. Ad aspera ad astra. If there is a will there is a way.</footer>
-</div>
-<div class="section">
-    <h3>Descarga Manual (Plan B)</h3>
-    <div class="section" style="background: rgba(255, 255, 255, 0.03); border: 1px solid #1e293b; padding: 20px; border-radius: 12px; margin-top: 25px; margin-bottom: 25px;">
-            <h3 style="color: #38bdf8; margin-top: 0; margin-bottom: 10px;">DESCARGA MANUAL (PLAN B)</h3>
-            <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 15px; line-height: 1.4;">
-                Si tienes dificultades con la firma digital, puedes descargar, firmar a mano y enviarnos estos documentos:
-            </p>
-            <div style="display: flex; justify-content: center; width: 100%; margin-top: 15px;">
-    <a href="https://campusla.github.io/AliadosCampusLa/convenio-marco-campusla.pdf" target="_blank" class="btn" style="background: #334155; color: #ffffff; text-decoration: none; text-align: center; padding: 12px 20px; border-radius: 8px; font-weight: bold; width: 100%; box-sizing: border-box;">
-        📄 DESCARGAR CONVENIO MARCO LEGAL (PDF)
-    </a>
-</div>
+            <input type="hidden" id="agreement-hidden" name="Agreement">
         </div>
 
-        <!-- FOOTER DENTRO DEL CONTENEDOR -->
-        <footer style="text-align: center; font-size: 0.8rem; color: #64748b; margin-top: 15px;">
-            CAMPUSLA DE CLASE MUNDIAL<br>
-            Vidi midi vici. Ad aspera ad astra. If there is a will there is a way.
-        </footer>
-</body>
-</html>
-<div class="section">
-    <h3>Recursos y Credenciales</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-        
-        <a href="https://campusla.github.io/ReconocimientoOficialCampusLA/" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">📜</div>
-            <strong style="font-size: 0.8rem;">RECONOCIMIENTO OFICIAL</strong>
-        </a>
-
-        <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">📊</div>
-            <strong style="font-size: 0.8rem;">PORTAFOLIO Y TRACK RECORD</strong>
-        </a>
-
-        <a href="https://www.campuslatinoamerica.edu.co" target="_blank" 
-           style="background: #0f172a; padding: 20px; border-radius: 12px; text-decoration: none; color: #fff; border: 1px solid var(--border); text-align: center; transition: 0.3s;">
-            <div style="font-size: 1.5rem; margin-bottom: 10px;">🌐</div>
-            <strong style="font-size: 0.8rem;">PLATAFORMA OFICIAL</strong>
-        </a>
-    </div>
-</div>
-        <section class="section-card">
-            <h3>Información y Sedes de Operación</h3>
-            <input type="text" name="Nombre_Aliado" placeholder="Nombre de la Institución" required>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <input type="text" name="Documento" placeholder="NIT / Documento" required>
-                <input type="tel" name="Telefono" placeholder="WhatsApp" required>
+        <!-- ===================================================================== -->
+        <!-- DOCUMENTACIÓN - BLOQUE 2: AQUÍ PONES EL TEXTO LARGO DE CONDICIONES,   -->
+        <!-- OPERACIÓN, CAPACITACIÓN, TARIFAS, PUBLICIDAD O DOCUMENTOS ANEXOS.    -->
+        <!-- Todo lo que escribas dentro de #condiciones-box se sincroniza         -->
+        <!-- automáticamente al campo oculto "Condiciones" al enviar.            -->
+        <!-- ===================================================================== -->
+        <div class="section">
+            <h3>2. Condiciones Operativas, Documentos y Anexos</h3>
+            <div class="box" contenteditable="true" id="condiciones-box">
+[AQUÍ PONES EL TEXTO LARGO DE CONDICIONES, DOCUMENTOS, EXÁMENES, TARIFAS Y DESPLIEGUE]
             </div>
+            <input type="hidden" id="condiciones-hidden" name="Condiciones">
+        </div>
+
+        <!-- BLOQUE 3: DATOS DEL ALIADO / INSTITUCIÓN Y SEDES -->
+        <div class="section">
+            <h3>3. Datos de Legalización y Sedes de Operación</h3>
+
+            <label for="institution_name">Nombre de la Institución / Aliado:</label>
+            <input type="text" id="institution_name" name="Institucion_Aliada" required placeholder="Ej: Universidad Aliada o Nombre del Aliado">
+
+            <label for="proctor_name">Nombre del Proctor / Representante / Aliado:</label>
+            <input type="text" id="proctor_name" name="Representante_Proctor" required placeholder="Ej: Nombre completo">
+
+            <label for="proctor_cc">Cédula / NIT / Documento de Identidad:</label>
+            <input type="text" id="proctor_cc" name="Documento_Identidad" required placeholder="Ej: 12.345.678">
+
+            <label for="proctor_email">Correo Electrónico:</label>
+            <input type="email" id="proctor_email" name="Correo_Contacto" required placeholder="correo@ejemplo.com">
+
+            <label for="telefono_aliado">Teléfono / WhatsApp:</label>
+            <input type="tel" id="telefono_aliado" name="Telefono" required placeholder="Ej: +57 300 000 0000">
+
             <table class="table-sedes">
-                <thead><tr><th>N°</th><th>Ciudad</th><th>Dirección</th><th>Responsable</th></tr></thead>
+                <thead>
+                    <tr><th>N°</th><th>Ciudad</th><th>Dirección</th><th>Responsable</th></tr>
+                </thead>
                 <tbody>
-                    <tr><td>1</td><td><input type="text" name="S1_C" placeholder="Ciudad"></td><td><input type="text" name="S1_D" placeholder="Dirección"></td><td><input type="text" name="S1_R" placeholder="Nombre"></td></tr>
-                    <tr><td>2</td><td><input type="text" name="S2_C" placeholder="Ciudad"></td><td><input type="text" name="S2_D" placeholder="Dirección"></td><td><input type="text" name="S2_R" placeholder="Nombre"></td></tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="S1_C" placeholder="Ciudad"></td>
+                        <td><input type="text" name="S1_D" placeholder="Dirección"></td>
+                        <td><input type="text" name="S1_R" placeholder="Nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="S2_C" placeholder="Ciudad"></td>
+                        <td><input type="text" name="S2_D" placeholder="Dirección"></td>
+                        <td><input type="text" name="S2_R" placeholder="Nombre"></td>
+                    </tr>
                 </tbody>
             </table>
-        </section>
+        </div>
 
-        <button type="submit" class="btn-green">FIRMAR Y ENVIAR ALIANZA</button>
+        <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
+        <div class="section">
+            <h3>4. Firma Digital Autorizada — Nuevo Convenio</h3>
+            <p class="doc-badge">Documento: Nuevo Convenio de Alianza y Representación CampusLA</p>
+            <label for="signature-pad">Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
+
+            <div class="canvas-wrapper">
+                <canvas id="signature-pad" width="800" height="200"></canvas>
+            </div>
+
+            <p id="signature-error" class="error-msg" style="display: none;">⚠️ Por favor dibuje su firma antes de enviar el convenio.</p>
+            <p id="signature-status" class="status-ok" style="display: none;"></p>
+
+            <div class="signature-actions">
+                <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-green">Firmar y Enviar Nuevo Convenio</button>
     </form>
 
-    <footer>CAMPUSLA DE CLASE MUNDIAL<br>Vidi midi vici. Ad aspera ad astra. If there is a will there is a way.</footer>
-</div>
-<div class="section">
-    <h3>Descarga Manual (Plan B)</h3>
-    <p style="font-size: 0.75rem; color: var(--text-dim); margin-bottom: 15px;">
-        Si tienes dificultades con la firma digital, puedes descargar, firmar a mano y enviarnos estos documentos:
-    </p>
-    <div style="display: grid; gap: 10px;">
-        <a href="https://campusla.github.io/AliadosCampusLa/convenio-marco-campusla.pdf" target="_blank" class="btn" style="background: #334155; color: #ffffff; text-decoration: none; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; display: block;">
-            📄 Descargar Convenio Marco Legal (PDF)
-        </a>
-        <a href="Formalidades%20Alianza%20institucional%20examenes%20.pdf" target="_blank" class="btn" style="background: #334155; color: #ffffff; text-decoration: none; text-align: center; padding: 12px; border-radius: 8px; font-weight: bold; display: block;">
-            📋 Descargar Formalidades
-        </a>
+    <!-- ===================================================================== -->
+    <!-- DOCUMENTACIÓN - PLAN B: AQUÍ PUEDES AGREGAR O AJUSTAR ENLACES A PDFS   -->
+    <!-- O DOCUMENTOS DESCARGABLES SI QUIERES SUMAR MÁS DOCUMENTOS.           -->
+    <!-- ===================================================================== -->
+    <div class="section">
+        <h3>Descarga Manual (Plan B)</h3>
+        <p class="planb-text">Si tienes dificultades con la firma digital, puedes descargar, firmar a mano y enviarnos estos documentos:</p>
+        <div class="planb-links">
+            <a href="https://campusla.github.io/AliadosCampusLa/convenio-marco-campusla.pdf" target="_blank" class="btn-planb">
+                📄 Descargar Convenio Marco Legal (PDF)
+            </a>
+            <a href="Formalidades%20Alianza%20institucional%20examenes%20.pdf" target="_blank" class="btn-planb">
+                📋 Descargar Formalidades
+            </a>
+        </div>
     </div>
+
+    <footer>
+        CAMPUSLA DE CLASE MUNDIAL<br>
+        Vidi midi vici. Ad aspera ad astra. If there is a will there is a way.
+    </footer>
 </div>
-    
+
+<script>
+    const canvas = document.getElementById('signature-pad');
+    const ctx = canvas.getContext('2d');
+    const signatureInput = document.getElementById('signature-data');
+    const detalleFirmaInput = document.getElementById('detalle-firma');
+    const errorMsg = document.getElementById('signature-error');
+    const statusMsg = document.getElementById('signature-status');
+    const form = document.getElementById('convenio-form');
+
+    let painting = false;
+    let hasSigned = false;
+
+    function getCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        const clientX = e.touches && e.touches.length ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches && e.touches.length ? e.touches[0].clientY : e.clientY;
+
+        return {
+            x: (clientX - rect.left) * scaleX,
+            y: (clientY - rect.top) * scaleY
+        };
+    }
+
+    function startPosition(e) {
+        painting = true;
+        hasSigned = true;
+        errorMsg.style.display = 'none';
+        const pos = getCoordinates(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+        draw(e);
+    }
+
+    function endPosition() {
+        if (!painting) return;
+        painting = false;
+        ctx.beginPath();
+        saveSignatureDetails();
+    }
+
+    function draw(e) {
+        if (!painting) return;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = '#0f172a';
+
+        const pos = getCoordinates(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+    }
+
+    canvas.addEventListener('mousedown', startPosition);
+    canvas.addEventListener('mouseup', endPosition);
+    canvas.addEventListener('mouseleave', endPosition);
+    canvas.addEventListener('mousemove', draw);
+
+    canvas.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        startPosition(e);
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        endPosition();
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        draw(e);
+    }, { passive: false });
+
+    document.getElementById('clear-signature').addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        signatureInput.value = '';
+        detalleFirmaInput.value = '';
+        hasSigned = false;
+        statusMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+    });
+
+    function syncEditableBoxes() {
+        const agreementBox = document.getElementById('agreement-box');
+        const agreementHidden = document.getElementById('agreement-hidden');
+        if (agreementBox && agreementHidden) {
+            agreementHidden.value = agreementBox.innerText.trim();
+        }
+
+        const condicionesBox = document.getElementById('condiciones-box');
+        const condicionesHidden = document.getElementById('condiciones-hidden');
+        if (condicionesBox && condicionesHidden) {
+            condicionesHidden.value = condicionesBox.innerText.trim();
+        }
+    }
+
+    function saveSignatureDetails() {
+        if (!hasSigned) return;
+
+        const ahora = new Date().toLocaleString('es-CO', {
+            dateStyle: 'full',
+            timeStyle: 'medium'
+        });
+
+        const institucion = document.getElementById('institution_name').value.trim() || 'No especificada';
+        const firmante = document.getElementById('proctor_name').value.trim() || 'No especificado';
+        const documento = document.getElementById('proctor_cc').value.trim() || 'No especificado';
+
+        detalleFirmaInput.value = `NUEVO CONVENIO FIRMADO | Institución/Aliado: ${institucion} | Firmante: ${firmante} | Documento: ${documento} | Fecha y hora: ${ahora}`;
+        signatureInput.value = canvas.toDataURL('image/png');
+
+        statusMsg.textContent = `✓ Firma de Nuevo Convenio registrada (${ahora})`;
+        statusMsg.style.display = 'block';
+    }
+
+    form.addEventListener('submit', (e) => {
+        if (!hasSigned) {
+            e.preventDefault();
+            errorMsg.style.display = 'block';
+            canvas.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+        }
+        syncEditableBoxes();
+        saveSignatureDetails();
+    });
+</script>
 </body>
 </html>
