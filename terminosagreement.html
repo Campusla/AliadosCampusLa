@@ -3,331 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convenio Aliados - CampusLA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    
+    <title>Alianza Estratégica - CampusLA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ===== GLOBAL ===== */
+        :root {
+            --bg: #02060d;
+            --card: #0b111d;
+            --primary: #0084ff;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
         body {
-            background: #020617;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: #e6edf5;
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             margin: 0;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
+            padding: 20px;
+            font-size: 13px;
         }
 
-        .container {
-            width: 100%;
-            max-width: 600px;
+        .wrapper {
+            max-width: 800px;
+            margin: auto;
         }
 
-        .section-card {
-            background: linear-gradient(145deg, #071a33, #0a2245);
-            border-radius: 16px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid rgba(56,189,248,0.2);
-        }
-
-        h2, h3 {
-            margin-top: 0;
-            color: #38bdf8;
+        header {
             text-align: center;
+            padding: 25px 0;
         }
 
-        /* ===== CAJA DE TEXTO LEGAL ===== */
-        .terminos-box {
-            background: #020c1b;
-            padding: 15px;
-            border-radius: 12px;
-            border: 1px solid rgba(56,189,248,.15);
-            line-height: 1.6;
-            color: #d6e3f1;
-            font-size: 0.9rem;
-            max-height: 180px;
-            overflow-y: auto;
-            margin-bottom: 15px;
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -1px;
         }
 
-        /* ===== BLOQUE DE IDENTIDAD (NOMBRE) ===== */
-        .nombre-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .input-refuerzo {
-            width: 100%;
-            background: #020c1b;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid rgba(56,189,248,.4);
-            color: #ffffff;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            text-align: center;
+        .inst-tag {
+            font-size: 0.65rem;
+            color: var(--primary);
+            font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        #previewNombre {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.9rem;
-            color: #38bdf8;
-            min-height: 45px;
-            border-bottom: 1px solid rgba(56,189,248,0.2);
-            display: inline-block;
-            width: 80%;
-            text-transform: none;
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 22px;
         }
 
-        /* ===== AREA DE DIBUJO (CANVAS) ===== */
-        .canvas-container {
-            width: 100%;
-            background: #ffffff;
+        h3 {
+            font-size: 0.9rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .resource-card {
+            background: #0f172a;
+            padding: 18px;
             border-radius: 12px;
-            border: 2px solid #38bdf8;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid var(--border);
+            text-align: center;
+            display: block;
+        }
+
+        .resource-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .box {
+            width: 100%;
+            height: 300px;
+            background: #050a14;
+            border: 1px solid var(--border);
+            color: var(--text-dim);
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow-y: auto;
+            box-sizing: border-box;
+            font-size: 0.82rem;
+            line-height: 1.65;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        input, select {
+            width: 100%;
+            background: #050a14;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 11px;
+            color: #ffffff;
+            margin-bottom: 14px;
+            box-sizing: border-box;
+            font-size: 0.9rem;
+        }
+
+        .table-sedes {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .table-sedes th, .table-sedes td {
+            border: 1px solid var(--border);
+            padding: 8px;
+            text-align: left;
+            font-size: 0.8rem;
+        }
+
+        .table-sedes input {
+            margin-bottom: 0;
+            padding: 8px;
+        }
+
+        .doc-badge {
+            display: inline-block;
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .canvas-wrapper {
+            width: 100%;
+            margin-top: 10px;
+            border: 2px dashed #64748b;
+            border-radius: 10px;
+            background-color: #ffffff;
             overflow: hidden;
             touch-action: none;
         }
 
-        #firmaCanvas {
+        #signature-pad {
             display: block;
             width: 100%;
-            height: 220px;
+            height: 200px;
             cursor: crosshair;
+            background-color: #ffffff;
         }
 
-        /* ===== BOTONES ===== */
-        .btn-limpiar {
-            background: transparent;
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-            padding: 8px 15px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            margin-top: 10px;
-            width: 100%;
+        .signature-actions {
+            margin-top: 12px;
         }
 
-        .btn-enviar {
-            background: #22c55e;
-            color: white;
+        .btn-secondary {
+            background: #334155;
+            color: #ffffff;
             border: none;
-            padding: 18px;
-            border-radius: 10px;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-weight: 600;
             cursor: pointer;
-            font-weight: 700;
-            font-size: 1.2rem;
-            width: 100%;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-            margin-top: 10px;
+            font-size: 0.8rem;
         }
 
-        .btn-enviar:hover { background: #16a34a; transform: scale(1.01); }
+        .btn-green {
+            display: block;
+            text-align: center;
+            background: #00c853;
+            color: #ffffff;
+            width: 100%;
+            padding: 17px;
+            border-radius: 10px;
+            font-weight: 800;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-bottom: 22px;
+        }
 
+        .error-msg {
+            color: #f87171;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .status-ok {
+            color: #4ade80;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        .planb-text {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+        }
+
+        .planb-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .btn-planb {
+            background: #334155;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
+<div class="wrapper">
+    <header>
+        <div class="logo-text">CAMPUSLA</div>
+        <div class="inst-tag">ALIANZA ESTRATÉGICA Y OPERACIÓN ACADÉMICA</div>
+    </header>
 
-<div class="container">
-    <form id="formAliados" action="https://Formsubmit.co/eatramites1@gmail.com" method="POST">
-        
-        <div class="section-card">
-            <h2>Acuerdo de Colaboración</h2>
-            <div class="terminos-box">
-                <p>Al proceder con la firma, usted acepta los términos del programa de aliados de <b>Campus Latinoamérica</b>.</p>
-                <p>CampusLA – Colombia
-Licencia de funcionamiento – Resolución 210 del 4 de marzo de 2020
-Sitio web: www.campuslatinoamerica.edu.co
-En convenios y procesos de articulación con:
-In Other Words – ETS – CAT (Cambridge School of Performing and Visual Arts) – MET Exam – TOEFL – ETS – RIET – USAID – Oxford – OTE – Pearson – Cambridge – Universidad Jorge Tadeo Lozano – UPTC – Pontificia Universidad Javeriana.
-Aprobación Ministerio de Educación Nacional – Examen ITEP Decreto 12730 de 2017.
-Resolución Secretaría de Educación de Duitama 210 – Decreto 0.60.0.1.2.3 de 2020.
-Tel: +57 314 436 5569
-________________________________________
-Asunto: Selección de La institución para habilitación de Exámenes Internacionales – Resolución 018035 de 2021 Ministerio de Educación Nacional
-Estimadas directivas de La institución,
-Reciban un cordial saludo.
-Nos complace informarles que La institución ha sido seleccionada para participar en el programa de habilitación de Exámenes Internacionales administrados a través de la plataforma CampusLA, en cumplimiento de la Resolución 018035 de 2021 del Ministerio de Educación Nacional.
-Este programa tiene como objetivo fortalecer las capacidades institucionales en evaluación internacional del idioma inglés, ampliando las oportunidades académicas para sus estudiantes y permitiendo a su institución administrar certificaciones internacionales reconocidas.
-________________________________________
+    <!-- RECURSOS Y CREDENCIALES -->
+    <div class="section">
+        <h3>Recursos y Credenciales</h3>
+        <div class="resources-grid">
+            <a href="https://campusla.github.io/ReconocimientoOficialCampusLA/" target="_blank" class="resource-card">
+                <div class="resource-icon">📜</div>
+                <strong>RECONOCIMIENTO OFICIAL</strong>
+            </a>
+            <a href="https://campusla.github.io/hub-campusla-branding/" target="_blank" class="resource-card">
+                <div class="resource-icon">📊</div>
+                <strong>PORTAFOLIO Y TRACK RECORD</strong>
+            </a>
+            <a href="https://www.campuslatinoamerica.edu.co" target="_blank" class="resource-card">
+                <div class="resource-icon">🌐</div>
+                <strong>PLATAFORMA OFICIAL</strong>
+            </a>
+        </div>
+    </div>
 
-Quiénes somos?
-CampusLA es una plataforma educativa respaldada por el programa Economía Naranja del SENA, que integra diferentes servicios educativos y académicos en cinco ejes principales:
-Oferta Académica
-Más de 4500 cursos en habilidades blandas, habilidades técnicas, economía naranja y formación para el trabajo.
-Certificación de Habilidades Laborales
-Programas de certificación orientados al desarrollo de competencias laborales.
-Exámenes Internacionales
-Trabajamos con diversas casas certificadoras internacionales como:
-Cambridge – MET – Anglia – TOEFL – Oxford Test of English – Versant – LinguaSkill – Pearson – Benchmark.
-Directorio académico y empresarial
-Plataforma que conecta estudiantes, instituciones educativas y empresas.
-E-commerce educativo para aliados
-Sistema gratuito que permite a instituciones aliadas ofertar programas académicos dentro de la plataforma.
-Además, CampusLA desarrolla programas de movilidad académica, homologaciones universitarias, diplomados internacionales y acceso a programas de pregrado, especialización, maestría y doctorado con universidades aliadas.
-________________________________________
-Alcance del programa para La institución
-A través de este programa, La institución podrá habilitar un pull de exámenes internacionales pertenecientes a algunas de las principales casas certificadoras del mundo.
-Esto permitirá:
-• ofrecer certificaciones internacionales directamente a sus estudiantes
-• administrar procesos de evaluación en sus propias instalaciones
-• fortalecer su oferta académica
-• generar ingresos institucionales adicionales
-________________________________________
-Exámenes Internacionales disponibles
-Dentro del programa, La institución podrá acceder a diversas modalidades de evaluación internacional del idioma inglés:
-• ANGLIA – 3, 4 y 5 habilidades
-• TOEFL Paper Based – 3 habilidades
-• MET – 3, 4 y 5 habilidades
-• TOEFL ITP Virtual – 3 y 4 habilidades
-• LinguaSkill – 3 y 4 habilidades
-• Versant – 4 habilidades
-• Oxford Test of English – 3 y 4 habilidades
-• OPTE – 4 habilidades
-• Pearson – 3 y 4 habilidades
-• Benchmark – 4 habilidades
-• TOEFL IBT – 4 habilidades
-En total, La institución tendrá acceso a aproximadamente 18 modalidades diferentes de exámenes internacionales.
-________________________________________
-Activación del programa
-Para activar el programa en su institución, simplemente deben revisar y firmar el documento disponible en el siguiente enlace:
-https://campusla.github.io/AliadosCampusLa/
-Una vez firmado el documento, La institución quedará habilitada para iniciar el proceso de implementación del sistema de exámenes internacionales dentro de su institución.
-Este proceso:
-• no tiene ningún costo para la institución
-• no exige metas mínimas de ventas
-• no requiere compra anticipada de exámenes
-Los exámenes se solicitan únicamente bajo demanda, según las necesidades de la institución.
-Posteriormente, CampusLA enviará:
-• tabla de comisiones institucionales
-• estructura de precios de exámenes
-• lineamientos de uso de logotipos
-• programas de capacitación para el personal encargado.
-________________________________________
-Implementación institucional
-CampusLA brindará acompañamiento para:
-• capacitación del personal administrativo y académico
-• implementación de exámenes internacionales dentro de sus programas
-• integración de certificaciones como requisito de grado
-• desarrollo de programas de preparación para los estudiantes.
-________________________________________
-Quedamos atentos para coordinar una reunión virtual y ampliar la información sobre el funcionamiento del programa.
-Será un gusto contar con La institución como parte del ecosistema académico de CampusLA, trabajando conjuntamente para fortalecer las oportunidades educativas y de certificación internacional en la región.
-________________________________________
-Cordialmente,
+    <!-- FORMULARIO PRINCIPAL HACIA FORMSUBMIT -->
+    <form id="convenio-form" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo Convenio Firmado - CampusLA">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.campuslatinoamerica.edu.co">
+        <input type="hidden" id="tipo-documento" name="Tipo_Documento" value="Nuevo Convenio de Alianza y Representación">
+        <input type="hidden" id="detalle-firma" name="Detalle_Firma" value="">
+        <input type="hidden" id="signature-data" name="Firma_Base64" value="">
 
-Hollman Alberto Álvarez Salamanca
-Representante Legal
-CampusLA S.A.S
-NIT 1052379481
-Resolución 210 de 2020
-Tel: +57 314 436 5569
-contacto@campuslatinoamerica.edu.co
-www.campuslatinoamerica.edu.co
-
-Se compromete a la promoción honesta de los servicios educativos y al cumplimiento de las metas acordadas.</p>
-                </div>
+        <!-- ===================================================================== -->
+        <!-- DOCUMENTACIÓN - BLOQUE 1: AQUÍ PONES EL TEXTO LARGO DEL ACUERDO /     -->
+        <!-- CONVENIO MARCO. Todo lo que escribas dentro de #agreement-box se       -->
+        <!-- sincroniza automáticamente al campo oculto "Agreement" al enviar.     -->
+        <!-- ===================================================================== -->
+        <div class="section">
+            <h3>1. Acuerdo de Colaboración (Agreement)</h3>
+            <div class="box" contenteditable="true" id="agreement-box">
+[AQUÍ PONES EL TEXTO LARGO DEL ACUERDO / CONVENIO / PROPUESTA]
+            </div>
+            <input type="hidden" id="agreement-hidden" name="Agreement">
         </div>
 
-        <div class="section-card">
-            <h3>Validación de Identidad</h3>
-            
-            <div class="nombre-container">
-                <label style="font-size: 0.85rem; margin-bottom: 8px; display: block;">1. Escriba su nombre completo (Aceptación escrita):</label>
-                <input type="text" name="Nombre_Legal" id="inputNombre" class="input-refuerzo" placeholder="ESCRIBA AQUÍ SU NOMBRE" required>
-                
-                <div id="previewNombre"></div>
+        <!-- ===================================================================== -->
+        <!-- DOCUMENTACIÓN - BLOQUE 2: AQUÍ PONES EL TEXTO LARGO DE CONDICIONES,   -->
+        <!-- OPERACIÓN, CAPACITACIÓN, TARIFAS, PUBLICIDAD O DOCUMENTOS ANEXOS.    -->
+        <!-- Todo lo que escribas dentro de #condiciones-box se sincroniza         -->
+        <!-- automáticamente al campo oculto "Condiciones" al enviar.            -->
+        <!-- ===================================================================== -->
+        <div class="section">
+            <h3>2. Condiciones Operativas, Documentos y Anexos</h3>
+            <div class="box" contenteditable="true" id="condiciones-box">
+[AQUÍ PONES EL TEXTO LARGO DE CONDICIONES, DOCUMENTOS, EXÁMENES, TARIFAS Y DESPLIEGUE]
+            </div>
+            <input type="hidden" id="condiciones-hidden" name="Condiciones">
+        </div>
+
+        <!-- BLOQUE 3: DATOS DEL ALIADO / INSTITUCIÓN Y SEDES -->
+        <div class="section">
+            <h3>3. Datos de Legalización y Sedes de Operación</h3>
+
+            <label for="institution_name">Nombre de la Institución / Aliado:</label>
+            <input type="text" id="institution_name" name="Institucion_Aliada" required placeholder="Ej: Universidad Aliada o Nombre del Aliado">
+
+            <label for="proctor_name">Nombre del Proctor / Representante / Aliado:</label>
+            <input type="text" id="proctor_name" name="Representante_Proctor" required placeholder="Ej: Nombre completo">
+
+            <label for="proctor_cc">Cédula / NIT / Documento de Identidad:</label>
+            <input type="text" id="proctor_cc" name="Documento_Identidad" required placeholder="Ej: 12.345.678">
+
+            <label for="proctor_email">Correo Electrónico:</label>
+            <input type="email" id="proctor_email" name="Correo_Contacto" required placeholder="correo@ejemplo.com">
+
+            <label for="telefono_aliado">Teléfono / WhatsApp:</label>
+            <input type="tel" id="telefono_aliado" name="Telefono" required placeholder="Ej: +57 300 000 0000">
+
+            <table class="table-sedes">
+                <thead>
+                    <tr><th>N°</th><th>Ciudad</th><th>Dirección</th><th>Responsable</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" name="S1_C" placeholder="Ciudad"></td>
+                        <td><input type="text" name="S1_D" placeholder="Dirección"></td>
+                        <td><input type="text" name="S1_R" placeholder="Nombre"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><input type="text" name="S2_C" placeholder="Ciudad"></td>
+                        <td><input type="text" name="S2_D" placeholder="Dirección"></td>
+                        <td><input type="text" name="S2_R" placeholder="Nombre"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
+        <div class="section">
+            <h3>4. Firma Digital Autorizada — Nuevo Convenio</h3>
+            <p class="doc-badge">Documento: Nuevo Convenio de Alianza y Representación CampusLA</p>
+            <label for="signature-pad">Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
+
+            <div class="canvas-wrapper">
+                <canvas id="signature-pad" width="800" height="200"></canvas>
             </div>
 
-            <div class="dibujo-container">
-                <label style="font-size: 0.85rem; margin-bottom: 8px; display: block;">2. Realice su firma manual (Validación gráfica):</label>
-                <div class="canvas-container">
-                    <canvas id="firmaCanvas"></canvas>
-                </div>
-                <input type="hidden" name="Firma_Imagen_PNG" id="hiddenFirma">
-                <button type="button" class="btn-limpiar" onclick="limpiarCanvas()">Limpiar dibujo</button>
+            <p id="signature-error" class="error-msg" style="display: none;">⚠️ Por favor dibuje su firma antes de enviar el convenio.</p>
+            <p id="signature-status" class="status-ok" style="display: none;"></p>
+
+            <div class="signature-actions">
+                <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
             </div>
         </div>
 
-        <button type="submit" class="btn-enviar">Confirmar Afiliación</button>
+        <button type="submit" class="btn-green">Firmar y Enviar Nuevo Convenio</button>
     </form>
+
+    <!-- ===================================================================== -->
+    <!-- DOCUMENTACIÓN - PLAN B: AQUÍ PUEDES AGREGAR O AJUSTAR ENLACES A PDFS   -->
+    <!-- O DOCUMENTOS DESCARGABLES SI QUIERES SUMAR MÁS DOCUMENTOS.           -->
+    <!-- ===================================================================== -->
+    <div class="section">
+        <h3>Descarga Manual (Plan B)</h3>
+        <p class="planb-text">Si tienes dificultades con la firma digital, puedes descargar, firmar a mano y enviarnos estos documentos:</p>
+        <div class="planb-links">
+            <a href="https://campusla.github.io/AliadosCampusLa/convenio-marco-campusla.pdf" target="_blank" class="btn-planb">
+                📄 Descargar Convenio Marco Legal (PDF)
+            </a>
+            <a href="Formalidades%20Alianza%20institucional%20examenes%20.pdf" target="_blank" class="btn-planb">
+                📋 Descargar Formalidades
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        CAMPUSLA DE CLASE MUNDIAL<br>
+        Vidi midi vici. Ad aspera ad astra. If there is a will there is a way.
+    </footer>
 </div>
 
 <script>
-    const canvas = document.getElementById("firmaCanvas");
-    const ctx = canvas.getContext("2d");
-    const form = document.getElementById("formAliados");
-    const inputNombre = document.getElementById("inputNombre");
-    const previewNombre = document.getElementById("previewNombre");
-    const hiddenFirma = document.getElementById("hiddenFirma");
+    const canvas = document.getElementById('signature-pad');
+    const ctx = canvas.getContext('2d');
+    const signatureInput = document.getElementById('signature-data');
+    const detalleFirmaInput = document.getElementById('detalle-firma');
+    const errorMsg = document.getElementById('signature-error');
+    const statusMsg = document.getElementById('signature-status');
+    const form = document.getElementById('convenio-form');
 
-    let trazando = false;
+    let painting = false;
+    let hasSigned = false;
 
-    // Sincronizar texto con preview
-    inputNombre.addEventListener('input', (e) => {
-        previewNombre.innerText = e.target.value;
+    function getCoordinates(e) {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+
+        const clientX = e.touches && e.touches.length ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches && e.touches.length ? e.touches[0].clientY : e.clientY;
+
+        return {
+            x: (clientX - rect.left) * scaleX,
+            y: (clientY - rect.top) * scaleY
+        };
+    }
+
+    function startPosition(e) {
+        painting = true;
+        hasSigned = true;
+        errorMsg.style.display = 'none';
+        const pos = getCoordinates(e);
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+        draw(e);
+    }
+
+    function endPosition() {
+        if (!painting) return;
+        painting = false;
+        ctx.beginPath();
+        saveSignatureDetails();
+    }
+
+    function draw(e) {
+        if (!painting) return;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.strokeStyle = '#0f172a';
+
+        const pos = getCoordinates(e);
+        ctx.lineTo(pos.x, pos.y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(pos.x, pos.y);
+    }
+
+    canvas.addEventListener('mousedown', startPosition);
+    canvas.addEventListener('mouseup', endPosition);
+    canvas.addEventListener('mouseleave', endPosition);
+    canvas.addEventListener('mousemove', draw);
+
+    canvas.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        startPosition(e);
+    }, { passive: false });
+
+    canvas.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        endPosition();
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        draw(e);
+    }, { passive: false });
+
+    document.getElementById('clear-signature').addEventListener('click', () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        signatureInput.value = '';
+        detalleFirmaInput.value = '';
+        hasSigned = false;
+        statusMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
     });
 
-    // Ajuste de tamaño
-    function ajustar() {
-        canvas.width = canvas.offsetWidth;
-        canvas.height = canvas.offsetHeight;
-    }
-    window.onload = ajustar;
+    function syncEditableBoxes() {
+        const agreementBox = document.getElementById('agreement-box');
+        const agreementHidden = document.getElementById('agreement-hidden');
+        if (agreementBox && agreementHidden) {
+            agreementHidden.value = agreementBox.innerText.trim();
+        }
 
-    // Lógica de Firma (Mouse y Touch)
-    function getPos(e) {
-        let rect = canvas.getBoundingClientRect();
-        let cx = e.touches ? e.touches[0].clientX : e.clientX;
-        let cy = e.touches ? e.touches[0].clientY : e.clientY;
-        return { x: cx - rect.left, y: cy - rect.top };
-    }
-
-    function inicio(e) {
-        trazando = true;
-        let p = getPos(e);
-        ctx.beginPath();
-        ctx.moveTo(p.x, p.y);
-        if(e.type === 'touchstart') e.preventDefault();
+        const condicionesBox = document.getElementById('condiciones-box');
+        const condicionesHidden = document.getElementById('condiciones-hidden');
+        if (condicionesBox && condicionesHidden) {
+            condicionesHidden.value = condicionesBox.innerText.trim();
+        }
     }
 
-    function mov(e) {
-        if (!trazando) return;
-        let p = getPos(e);
-        ctx.lineWidth = 3;
-        ctx.lineCap = "round";
-        ctx.strokeStyle = "#000000";
-        ctx.lineTo(p.x, p.y);
-        ctx.stroke();
-        if(e.type === 'touchmove') e.preventDefault();
+    function saveSignatureDetails() {
+        if (!hasSigned) return;
+
+        const ahora = new Date().toLocaleString('es-CO', {
+            dateStyle: 'full',
+            timeStyle: 'medium'
+        });
+
+        const institucion = document.getElementById('institution_name').value.trim() || 'No especificada';
+        const firmante = document.getElementById('proctor_name').value.trim() || 'No especificado';
+        const documento = document.getElementById('proctor_cc').value.trim() || 'No especificado';
+
+        detalleFirmaInput.value = `NUEVO CONVENIO FIRMADO | Institución/Aliado: ${institucion} | Firmante: ${firmante} | Documento: ${documento} | Fecha y hora: ${ahora}`;
+        signatureInput.value = canvas.toDataURL('image/png');
+
+        statusMsg.textContent = `✓ Firma de Nuevo Convenio registrada (${ahora})`;
+        statusMsg.style.display = 'block';
     }
 
-    function fin() { trazando = false; }
-
-    canvas.addEventListener("mousedown", inicio);
-    canvas.addEventListener("mousemove", mov);
-    window.addEventListener("mouseup", fin);
-    canvas.addEventListener("touchstart", inicio, {passive: false});
-    canvas.addEventListener("touchmove", mov, {passive: false});
-    canvas.addEventListener("touchend", fin);
-
-    function limpiarCanvas() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        hiddenFirma.value = "";
-    }
-
-    // Al enviar el formulario compilamos la imagen
-    form.onsubmit = function() {
-        const dataURL = canvas.toDataURL("image/png");
-        hiddenFirma.value = dataURL;
-    };
+    form.addEventListener('submit', (e) => {
+        if (!hasSigned) {
+            e.preventDefault();
+            errorMsg.style.display = 'block';
+            canvas.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return;
+        }
+        syncEditableBoxes();
+        saveSignatureDetails();
+    });
 </script>
-
 </body>
 </html>
-
