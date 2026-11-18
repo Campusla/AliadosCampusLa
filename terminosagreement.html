@@ -312,7 +312,9 @@
             <input type="hidden" id="condiciones-hidden" name="Condiciones">
         </div>
 
-        <!-- BLOQUE 3: DATOS DEL ALIADO / INSTITUCIÓN Y SEDES -->
+        <!-- ===================================================================== -->
+        <!-- BLOQUE 3: DATOS DEL ALIADO / INSTITUCIÓN Y TABLA DE SEDES             -->
+        <!-- ===================================================================== -->
         <div class="section">
             <h3>3. Datos de Legalización y Sedes de Operación</h3>
 
@@ -352,7 +354,9 @@
             </table>
         </div>
 
-        <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
+        <!-- ===================================================================== -->
+        <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO POR FORMSUBMIT A EATRAMITES1@GMAIL    -->
+        <!-- ===================================================================== -->
         <div class="section">
             <h3>4. Firma Digital Autorizada — Nuevo Convenio</h3>
             <p class="doc-badge">Documento: Nuevo Convenio de Alianza y Representación CampusLA</p>
@@ -506,25 +510,4 @@
 
         const institucion = document.getElementById('institution_name').value.trim() || 'No especificada';
         const firmante = document.getElementById('proctor_name').value.trim() || 'No especificado';
-        const documento = document.getElementById('proctor_cc').value.trim() || 'No especificado';
-
-        detalleFirmaInput.value = `NUEVO CONVENIO FIRMADO | Institución/Aliado: ${institucion} | Firmante: ${firmante} | Documento: ${documento} | Fecha y hora: ${ahora}`;
-        signatureInput.value = canvas.toDataURL('image/png');
-
-        statusMsg.textContent = `✓ Firma de Nuevo Convenio registrada (${ahora})`;
-        statusMsg.style.display = 'block';
-    }
-
-    form.addEventListener('submit', (e) => {
-        if (!hasSigned) {
-            e.preventDefault();
-            errorMsg.style.display = 'block';
-            canvas.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            return;
-        }
-        syncEditableBoxes();
-        saveSignatureDetails();
-    });
-</script>
-</body>
-</html>
+        const documento = document.getElementBy
