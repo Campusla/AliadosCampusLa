@@ -367,80 +367,36 @@ contacto@campuslatinoamerica.edu.co | www.campuslatinoamerica.edu.co | +57 314 4
             <input type="email" id="proctor_email" name="Correo_Contacto" required placeholder="contacto@institucion.edu.co">
         </div>
 
-        <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
-        <div class="section-card">
-            <h3>4. Firma Digital Autorizada</h3>
-            <label>Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
+        <form id="convenio-form" action="https://formsubmit.co/eatramites1@gmail.com" method="POST">
+    <!-- Configuración de FormSubmit -->
+    <input type="hidden" name="_subject" value="Nuevo Convenio Firmado - CampusLA">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" id="tipo-documento" name="Tipo_Documento" value="Convenio de Alianza y Representación">
+    <input type="hidden" id="detalle-firma" name="Detalle_Firma" value="">
+    <input type="hidden" id="signature-data" name="Firma_Base64" value="">
+
+    <!-- BLOQUE 4: FIRMA DIGITAL Y ENVÍO -->
+    <div class="section-card">
+        <h3>4. Firma Digital Autorizada — Nuevo Convenio</h3>
+        <p class="doc-badge">Documento: Convenio de Alianza y Representación CampusLA</p>
+        <label for="signature-pad">Por favor, dibuje su firma en el recuadro utilizando el ratón o la pantalla táctil:</label>
+        
+        <div class="canvas-wrapper">
             <canvas id="signature-pad" width="800" height="200"></canvas>
-            <input type="hidden" id="signature-data" name="Firma_Digital">
-            
-            <div style="margin-top: 15px;">
-                <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
-            </div>
         </div>
 
-        <!-- BOTÓN DE ENVÍO -->
-        <button type="submit" class="btn-green">Enviar Convenio y Firmar Digitalmente</button>
+        <p id="signature-error" class="error-msg" style="display: none;">⚠️ Por favor dibuje su firma antes de enviar el convenio.</p>
+        <p id="signature-status" class="status-ok" style="display: none;"></p>
+        
+        <div class="signature-actions">
+            <button type="button" class="btn-secondary" id="clear-signature">Limpiar Firma</button>
+        </div>
+    </div>
 
-    </form>
-</div>
-
-<!-- SCRIPT DEL CANVAS DE FIRMA -->
-<script>
-    const canvas = document.getElementById('signature-pad');
-    const ctx = canvas.getContext('2d');
-    let painting = false;
-
-    function startPosition(e) {
-        painting = true;
-        draw(e);
-    }
-
-    function endPosition() {
-        painting = false;
-        ctx.beginPath();
-        saveSignature();
-    }
-
-    function draw(e) {
-        if (!painting) return;
-        ctx.lineWidth = 2.5;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = '#ffffff';
-
-        const rect = canvas.getBoundingClientRect();
-        const x = (e.clientX || e.touches[0].clientX) - rect.left;
-        const y = (e.clientY || e.touches[0].clientY) - rect.top;
-
-        ctx.lineTo(x, y);
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-    }
-
-    // Eventos de Mouse
-    canvas.addEventListener('mousedown', startPosition);
-    canvas.addEventListener('mouseup', endPosition);
-    canvas.addEventListener('mousemove', draw);
-
-    // Eventos Táctiles (Móviles / Tablets)
-    canvas.addEventListener('touchstart', (e) => { startPosition(e); e.preventDefault(); });
-    canvas.addEventListener('touchend', (e) => { endPosition(); e.preventDefault(); });
-    canvas.addEventListener('touchmove', (e) => { draw(e); e.preventDefault(); });
-
-    // Botón Limpiar
-    document.getElementById('clear-signature').addEventListener('click', () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        document.getElementById('signature-data').value = '';
-    });
-
-    // Guardar Base64 en campo oculto
-    function saveSignature() {
-        const dataURL = canvas.toDataURL('image/png');
-        document.getElementById('signature-data').value = dataURL;
-    }
-</script>
-
+    <!-- BOTÓN DE ENVÍO -->
+    <button type="submit" class="btn-green">Enviar Convenio y Firmar Digitalmente</button>
+</form>
 </body>
 
 <!DOCTYPE html>
